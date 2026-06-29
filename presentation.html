@@ -4,487 +4,488 @@
 <meta charset="utf-8">
 <title>Ottica Clienti — Proposta per Centro Ottico Fiorentino</title>
 <style>
-/* ---------- FONTS ---------- */
-@font-face{font-family:'Manrope';font-weight:400;src:url('assets/fonts/manrope-400.woff2') format('woff2');font-display:swap}
-@font-face{font-family:'Manrope';font-weight:500;src:url('assets/fonts/manrope-500.woff2') format('woff2');font-display:swap}
-@font-face{font-family:'Manrope';font-weight:700;src:url('assets/fonts/manrope-700.woff2') format('woff2');font-display:swap}
-@font-face{font-family:'Manrope';font-weight:800;src:url('assets/fonts/manrope-800.woff2') format('woff2');font-display:swap}
-@font-face{font-family:'Grotesk';font-weight:500;src:url('assets/fonts/grotesk-500.woff2') format('woff2');font-display:swap}
-@font-face{font-family:'Grotesk';font-weight:700;src:url('assets/fonts/grotesk-700.woff2') format('woff2');font-display:swap}
+/* ====== FONTS ====== */
+@font-face{font-family:'Manrope';font-weight:400;src:url('assets/fonts/manrope-400.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-weight:500;src:url('assets/fonts/manrope-500.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-weight:700;src:url('assets/fonts/manrope-700.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-weight:800;src:url('assets/fonts/manrope-800.woff2') format('woff2')}
+@font-face{font-family:'Grotesk';font-weight:500;src:url('assets/fonts/grotesk-500.woff2') format('woff2')}
+@font-face{font-family:'Grotesk';font-weight:700;src:url('assets/fonts/grotesk-700.woff2') format('woff2')}
 
-/* ---------- TOKENS ---------- */
+/* ====== TOKENS ====== */
 :root{
-  --bg:#050807;
-  --bg2:#0a0f0c;
-  --ink:#eef3ef;
-  --muted:#8d9a93;
-  --faint:#5d6862;
-  --green:#0E7A48;
-  --green2:#16b46a;
-  --glow:rgba(22,180,106,.45);
-  --line:rgba(255,255,255,.09);
-  --card:rgba(255,255,255,.025);
-  --cardbrd:rgba(255,255,255,.08);
+  --paper:#ffffff; --cream:#f7f9f6; --panel:#f1f4ef;
+  --ink:#0f1a14; --muted:#5d6c63; --faint:#9aa79f;
+  --green:#0E7A48; --greenD:#0a5b36; --greenL:#e9f2ec; --greenL2:#f2f8f4;
+  --red:#b21f27; --redD:#7c151b; --redL:#f7eaea;
+  --line:#e6eae4; --hair:#dde3db;
+  --shadow:0 1px 2px rgba(16,42,28,.05), 0 12px 34px rgba(16,42,28,.07);
+  --shadowS:0 1px 2px rgba(16,42,28,.04), 0 6px 18px rgba(16,42,28,.05);
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{background:#000;color:var(--ink);font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased}
-
+html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 @page{size:1280px 720px;margin:0}
 
-.slide{
-  position:relative;width:1280px;height:720px;overflow:hidden;
-  background:radial-gradient(120% 90% at 85% 15%, #0c1410 0%, var(--bg2) 38%, var(--bg) 100%);
-  page-break-after:always;break-after:page;
-}
+.slide{position:relative;width:1280px;height:720px;overflow:hidden;background:var(--paper);page-break-after:always;break-after:page}
 .slide:last-child{page-break-after:auto}
 
-/* hairline grid texture */
-.slide::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:80px 80px;opacity:.25;
-  -webkit-mask-image:radial-gradient(120% 90% at 85% 10%, #000 0%, transparent 70%);
-}
+/* ====== HEADER / FOOTER ====== */
+.top{position:absolute;top:0;left:0;right:0;height:92px;padding:0 72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);z-index:6}
+.foot{position:absolute;bottom:34px;left:72px;right:72px;display:flex;align-items:center;gap:22px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);z-index:6}
+.foot .ln{flex:1;height:1px;background:var(--line)}
 
-.pad{position:absolute;inset:0;padding:74px 88px;display:flex;flex-direction:column}
+/* logo lockups */
+.lock{display:flex;align-items:center;gap:13px}
+.lock .ic{flex:none;display:block}
+.lock.oc .wmtxt{display:flex;flex-direction:column;font-family:'Grotesk';font-weight:700;color:var(--green);letter-spacing:.085em;line-height:.98}
+.lock.cof .wmtxt{display:flex;flex-direction:column;line-height:1.0}
+.lock.cof .l1{font-family:'Grotesk';font-weight:700;color:var(--redD);letter-spacing:.04em}
+.lock.cof .l2{font-family:'Manrope';font-weight:500;color:var(--red);letter-spacing:.3em}
 
-/* ---------- TYPE ---------- */
-.kicker{font-family:'Grotesk';font-weight:500;font-size:14px;letter-spacing:.42em;text-transform:uppercase;color:var(--green2)}
-.kicker .num{color:var(--faint);margin-right:14px}
-.h1{font-family:'Grotesk';font-weight:700;font-size:62px;line-height:1.02;letter-spacing:-.015em}
-.h1 .accent{color:var(--green2)}
-.h2{font-family:'Grotesk';font-weight:700;font-size:46px;line-height:1.04;letter-spacing:-.01em}
-.lead{font-size:19px;line-height:1.55;color:var(--muted);font-weight:400;max-width:760px}
-.tiny{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+/* header lockup sizing */
+.top .lock.oc .ic{height:30px}
+.top .lock.oc .wmtxt{font-size:14px}
+.top .lock.cof .ic{height:30px}
+.top .lock.cof .l1{font-size:13px}
+.top .lock.cof .l2{font-size:8.5px;margin-top:2px}
+.top .div{font-size:9.5px;letter-spacing:.26em;color:var(--faint);text-transform:uppercase}
 
-/* ---------- BRAND BAR ---------- */
-.topbar{position:absolute;top:0;left:0;right:0;height:64px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);z-index:5}
-.wm{display:flex;align-items:center;gap:11px;font-family:'Grotesk';font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase}
-.wm .ico{height:22px;width:auto;flex:none}
-.wm .ico-cof{height:24px}
-.wm.client{color:var(--ink);opacity:.96}
-.cover .wm .ico,.closing .wm .ico{height:34px}
-.cover .wm .ico-cof,.closing .wm .ico-cof{height:36px}
-.wm .sub{font-family:'Manrope';font-weight:500;font-size:9.5px;letter-spacing:.22em;color:var(--faint);display:block;margin-top:2px}
-.vs{font-family:'Grotesk';font-size:11px;letter-spacing:.3em;color:var(--faint)}
+/* ====== TYPOGRAPHY ====== */
+.kicker{display:flex;align-items:center;gap:14px;font-family:'Grotesk';font-weight:500;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--green)}
+.kicker::before{content:"";width:30px;height:2px;background:var(--green);display:block}
+.kicker .sn{font-weight:700;color:var(--faint)}
+.h1{font-family:'Grotesk';font-weight:700;font-size:60px;line-height:1.03;letter-spacing:-.02em;color:var(--ink)}
+.h2{font-family:'Grotesk';font-weight:700;font-size:50px;line-height:1.04;letter-spacing:-.018em;color:var(--ink)}
+.lead{font-size:19px;line-height:1.58;color:var(--muted);font-weight:400;max-width:780px}
+.lead b{color:var(--ink);font-weight:700}
+.em{color:var(--green)}
 
-/* ---------- FOOTER ---------- */
-.foot{position:absolute;bottom:30px;left:88px;right:88px;display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);z-index:5}
-.foot .bar{flex:1;height:1px;background:var(--line);margin:0 20px}
+.body{position:absolute;inset:92px 0 0 0;padding:54px 72px 70px;display:flex;flex-direction:column}
 
-/* ---------- IRIS MOTIF ---------- */
-.iris{position:absolute;background:url('assets/img/iris.jpg') center/contain no-repeat;mix-blend-mode:screen;opacity:.9;pointer-events:none}
+/* big faint section number */
+.bignum{position:absolute;top:74px;right:64px;font-family:'Grotesk';font-weight:700;font-size:230px;line-height:.8;color:var(--greenL);z-index:0;letter-spacing:-.04em;user-select:none}
 
-/* ---------- CARDS ---------- */
-.cards{display:grid;gap:20px;margin-top:auto;margin-bottom:8px}
-.c3{grid-template-columns:repeat(3,1fr)}
-.c4{grid-template-columns:repeat(4,1fr)}
-.c2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--card);border:1px solid var(--cardbrd);border-radius:16px;padding:26px 24px;position:relative;overflow:hidden}
-.card .idx{font-family:'Grotesk';font-weight:700;font-size:13px;color:var(--green2);letter-spacing:.1em}
-.card h3{font-family:'Grotesk';font-weight:700;font-size:21px;line-height:1.12;margin:14px 0 10px;letter-spacing:-.01em}
-.card p{font-size:14.5px;line-height:1.5;color:var(--muted)}
-.card .tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green2);font-weight:700}
-.card .topline{position:absolute;top:0;left:0;height:3px;width:46px;background:linear-gradient(90deg,var(--green2),transparent)}
+/* ====== CARDS ====== */
+.grid{display:grid;gap:22px;position:relative;z-index:1}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:var(--shadowS);position:relative}
+.card .n{font-family:'Grotesk';font-weight:700;font-size:14px;color:var(--green);letter-spacing:.06em}
+.card .tag{font-family:'Grotesk';font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.card h3{font-family:'Grotesk';font-weight:700;font-size:21px;line-height:1.14;letter-spacing:-.01em;margin:14px 0 11px;color:var(--ink)}
+.card p{font-size:14px;line-height:1.55;color:var(--muted)}
+.card .topdot{width:34px;height:34px;border-radius:9px;background:var(--greenL);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card .topdot span{font-family:'Grotesk';font-weight:700;color:var(--green);font-size:15px}
 
-/* lists */
-.ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:4px}
-.ul li{position:relative;padding-left:24px;font-size:14.5px;line-height:1.45;color:#c7d0cb}
-.ul li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--green2);box-shadow:0 0 10px var(--glow)}
-.ul.num li::before{display:none}
-.ul.num li .mk{position:absolute;left:0;top:-2px;font-family:'Grotesk';font-weight:700;color:var(--green2);font-size:18px;letter-spacing:0}
+/* list */
+.ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.ul li{position:relative;padding-left:26px;font-size:14.5px;line-height:1.5;color:#3c4a42}
+.ul li::before{content:"";position:absolute;left:2px;top:8px;width:8px;height:8px;border-radius:2px;background:var(--green)}
+.ul li b{color:var(--ink);font-weight:700}
 
-/* ---------- COVER ---------- */
-.cover .pad{justify-content:center}
-.cover-iris{right:-180px;top:50%;transform:translateY(-50%);width:840px;height:840px;opacity:.85}
-.cover .eyebrow{font-family:'Grotesk';font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--green2);font-size:15px;margin-bottom:26px}
-.cover h1{font-family:'Grotesk';font-weight:700;font-size:84px;line-height:.98;letter-spacing:-.02em;max-width:820px}
-.cover .for{margin-top:30px;font-size:22px;color:var(--muted);max-width:680px;line-height:1.5}
-.cover .for b{color:var(--ink);font-weight:700}
-.cover-meta{position:absolute;left:88px;bottom:74px;display:flex;gap:54px}
-.cover-meta .lab{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-.cover-meta .val{font-family:'Grotesk';font-weight:500;font-size:16px;color:var(--ink)}
+/* split */
+.split{display:flex;gap:60px;flex:1;align-items:center;position:relative;z-index:1}
+.split .l{flex:0 0 42%}
+.split .r{flex:1}
 
-/* ---------- SECTION INTRO COLUMN ---------- */
-.split{display:flex;gap:54px;flex:1;align-items:center}
-.split .col-l{flex:0 0 44%}
-.split .col-r{flex:1}
+/* numbered steps (roman / numeric) */
+.steps{list-style:none;display:flex;flex-direction:column;gap:26px}
+.steps li{position:relative;padding-left:62px;min-height:44px}
+.steps .mk{position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:12px;background:var(--greenL);color:var(--green);font-family:'Grotesk';font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.steps h4{font-family:'Grotesk';font-weight:700;font-size:18px;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
+.steps p{font-size:14.5px;line-height:1.5;color:var(--muted)}
 
-/* big stat */
-.statrow{display:flex;gap:46px;margin-top:30px}
-.stat .big{font-family:'Grotesk';font-weight:700;font-size:52px;color:var(--green2);line-height:1;letter-spacing:-.02em}
-.stat .lbl{font-size:13px;color:var(--muted);margin-top:8px;max-width:200px;line-height:1.4}
+/* pill / chip */
+.pill{display:inline-flex;align-items:center;gap:9px;background:var(--greenL);color:var(--greenD);border-radius:30px;padding:9px 18px;font-family:'Grotesk';font-weight:700;font-size:12px;letter-spacing:.04em}
+.pill .d{width:7px;height:7px;border-radius:50%;background:var(--green)}
 
-/* VTR steps */
-.vtr{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:auto;margin-bottom:6px}
-.vstep{border:1px solid var(--cardbrd);border-radius:18px;padding:26px 24px;background:var(--card);position:relative}
-.vstep .letter{font-family:'Grotesk';font-weight:700;font-size:60px;line-height:1;color:transparent;-webkit-text-stroke:1.4px var(--green2);opacity:.9}
-.vstep h3{font-family:'Grotesk';font-weight:700;font-size:18px;letter-spacing:.14em;text-transform:uppercase;margin:10px 0 16px;color:var(--ink)}
+/* ====== COVER ====== */
+.cover .iris-wrap{position:absolute;right:-260px;top:50%;transform:translateY(-50%);width:880px;height:880px;opacity:.9;z-index:0}
+.cover .iris-wrap img{width:100%;height:100%}
+.cover .veil{position:absolute;right:0;top:0;bottom:0;width:520px;background:linear-gradient(90deg,#fff 6%,rgba(255,255,255,0) 60%);z-index:1}
+.cover-pad{position:absolute;inset:0;padding:64px 72px;display:flex;flex-direction:column;z-index:2}
+.cover .big-oc{display:flex;align-items:center;gap:22px}
+.cover .big-oc .ic{height:80px}
+.cover .big-oc .wmtxt{font-size:38px;letter-spacing:.06em}
+.cover .center{margin-top:auto;margin-bottom:auto}
+.cover .eyebrow{font-family:'Grotesk';font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--green);font-size:14px;margin-bottom:22px}
+.cover h1{font-family:'Grotesk';font-weight:700;font-size:82px;line-height:.99;letter-spacing:-.025em;color:var(--ink)}
+.cover .sub{margin-top:26px;font-size:21px;line-height:1.5;color:var(--muted);max-width:600px}
+.cover .sub b{color:var(--ink);font-weight:700}
+.cover .prep{display:flex;align-items:center;gap:26px;padding-top:26px;border-top:1px solid var(--line)}
+.cover .prep .plab{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);line-height:1.5}
+.cover .big-cof .ic{height:50px}
+.cover .big-cof .l1{font-size:21px}
+.cover .big-cof .l2{font-size:11px;margin-top:3px}
 
-/* timeline */
-.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;flex:1;align-content:start}
-.tlcol{padding:0 28px;border-left:1px solid var(--line);position:relative}
-.tlcol:first-child{padding-left:0;border-left:none}
-.tlcol .ph{font-family:'Grotesk';font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:var(--green2)}
-.tlcol .mo{font-family:'Grotesk';font-weight:700;font-size:26px;margin:6px 0 4px}
-.tlcol .nm{font-size:13px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:18px}
-.tldot{position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--green2);box-shadow:0 0 12px var(--glow)}
-.tlcol:first-child .tldot{left:-4px}
+/* ====== TIMELINE ====== */
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:14px;position:relative;z-index:1}
+.tlcol{padding:30px 30px 0;position:relative}
+.tlcol:not(:first-child){border-left:1px solid var(--line)}
+.tlbar{position:absolute;top:0;left:30px;right:0;height:3px;background:var(--greenL)}
+.tlcol:first-child .tlbar{left:0}
+.tlbar .fill{position:absolute;left:0;top:0;bottom:0;width:46px;background:var(--green);border-radius:3px}
+.tlcol .ph{font-family:'Grotesk';font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--green);margin-top:22px}
+.tlcol .mo{font-family:'Grotesk';font-weight:700;font-size:27px;color:var(--ink);margin:7px 0 16px;letter-spacing:-.01em}
 
-/* price block */
-.price{display:flex;gap:30px;flex:1;align-items:stretch;margin-top:30px}
-.pcard{flex:1;border:1px solid var(--cardbrd);border-radius:20px;padding:38px 36px;background:var(--card);display:flex;flex-direction:column}
-.pcard.hi{background:linear-gradient(160deg,rgba(14,122,72,.20),rgba(14,122,72,.04));border-color:rgba(22,180,106,.4)}
-.pcard .amt{font-family:'Grotesk';font-weight:700;font-size:72px;line-height:1;letter-spacing:-.03em;color:var(--ink);margin:8px 0}
-.pcard.hi .amt{color:var(--green2)}
-.pcard .note{font-size:14px;color:var(--muted);line-height:1.5}
-.strike{color:var(--faint);text-decoration:line-through;font-weight:700}
+/* ====== PRICE ====== */
+.price{display:flex;gap:26px;flex:1;align-items:stretch;position:relative;z-index:1}
+.pcard{flex:1;border:1px solid var(--line);border-radius:20px;padding:40px 38px;background:var(--paper);box-shadow:var(--shadowS);display:flex;flex-direction:column}
+.pcard.hi{background:linear-gradient(160deg,var(--greenL),var(--greenL2));border-color:#cfe6d9}
+.pcard .lab{font-family:'Grotesk';font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+.pcard .amt{font-family:'Grotesk';font-weight:700;font-size:74px;line-height:1;letter-spacing:-.03em;color:var(--ink);margin:14px 0 6px}
+.pcard .amt.sm{font-size:46px;line-height:1.05}
+.pcard .note{font-size:14.5px;color:var(--muted);line-height:1.55}
+.pcard .note b{color:var(--ink)}
+.strike{color:var(--faint);text-decoration:line-through}
 
-/* closing */
-.closing .pad{justify-content:center;align-items:flex-start}
-.closing h1{font-family:'Grotesk';font-weight:700;font-size:76px;line-height:1.0;letter-spacing:-.02em;max-width:900px}
-.cta{margin-top:40px;display:flex;align-items:center;gap:18px}
-.cta .btn{font-family:'Grotesk';font-weight:700;font-size:17px;letter-spacing:.04em;color:#04130c;background:var(--green2);padding:17px 32px;border-radius:40px;box-shadow:0 0 40px var(--glow)}
-.cta .mail{font-size:16px;color:var(--muted)}
-.cta .mail b{color:var(--ink);font-weight:700}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative;z-index:1}
+.stat .big{font-family:'Grotesk';font-weight:700;font-size:62px;color:var(--green);line-height:1;letter-spacing:-.03em}
+.stat .lbl{font-size:13.5px;color:var(--muted);margin-top:12px;line-height:1.45;padding-right:18px}
+.stat{border-left:2px solid var(--greenL);padding-left:22px}
 
-.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--cardbrd);border-radius:30px;padding:8px 16px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--card)}
-.pill .d{width:7px;height:7px;border-radius:50%;background:var(--green2)}
+/* ====== CLOSING ====== */
+.closing{background:var(--ink)}
+.closing .iris-wrap{position:absolute;right:-280px;top:50%;transform:translateY(-50%);width:900px;height:900px;opacity:.5;z-index:0}
+.closing .iris-wrap img{width:100%;height:100%;filter:brightness(1.5)}
+.closing-pad{position:absolute;inset:0;padding:64px 72px;display:flex;flex-direction:column;z-index:2}
+.closing .wmtxt{color:#fff !important}
+.closing .lock.cof .l1{color:#fff}
+.closing .lock.cof .l2{color:#f2a6aa}
+.closing .top{border-bottom-color:rgba(255,255,255,.12)}
+.closing .center{margin-top:auto;margin-bottom:auto}
+.closing .eyebrow{font-family:'Grotesk';font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#3ad389;font-size:14px;margin-bottom:24px}
+.closing h1{font-family:'Grotesk';font-weight:700;font-size:72px;line-height:1.0;letter-spacing:-.022em;color:#fff;max-width:880px}
+.closing h1 .em{color:#3ad389}
+.cta{margin-top:42px;display:flex;align-items:center;gap:22px}
+.cta .btn{font-family:'Grotesk';font-weight:700;font-size:17px;color:#04130c;background:#2fd17e;padding:18px 34px;border-radius:40px}
+.cta .mail{font-size:16px;color:#aebbb3}
+.cta .mail b{color:#fff;font-weight:700}
+.closing .foot{color:rgba(255,255,255,.45)}
+.closing .foot .ln{background:rgba(255,255,255,.14)}
 </style>
 </head>
 <body>
 
-<!-- ===== LOGO ICON DEFINITIONS (ricostruzioni vettoriali dei loghi) ===== -->
+<!-- ===== LOGHI (ricostruzioni vettoriali) ===== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <!-- Ottica Clienti: occhio + iride -->
   <symbol id="ico-oc" viewBox="0 0 120 80">
-    <g fill="none" stroke="#19a062" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#0E7A48" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round">
       <path d="M9 40 Q60 3 111 40 Q60 77 9 40 Z"/>
       <line x1="20" y1="40" x2="33" y2="40"/>
       <line x1="87" y1="40" x2="100" y2="40"/>
       <circle cx="60" cy="40" r="21"/>
     </g>
-    <circle cx="60" cy="40" r="11.5" fill="#19a062"/>
-    <circle cx="64.5" cy="35.5" r="3.1" fill="#050807"/>
+    <circle cx="60" cy="40" r="11.5" fill="#0E7A48"/>
+    <circle cx="64.6" cy="35.4" r="3.2" fill="#ffffff"/>
   </symbol>
-  <!-- Centro Ottico Fiorentino: anello "C" + pupilla -->
   <symbol id="ico-cof" viewBox="0 0 100 100">
-    <path d="M74.6 25.6 A34 34 0 1 0 74.6 74.4" fill="none" stroke="#d23b41" stroke-width="15.5" stroke-linecap="round"/>
-    <circle cx="60.5" cy="50" r="12.5" fill="#d23b41"/>
+    <path d="M74.6 25.6 A34 34 0 1 0 74.6 74.4" fill="none" stroke="#b21f27" stroke-width="15.5" stroke-linecap="round"/>
+    <circle cx="60.5" cy="50" r="12.5" fill="#b21f27"/>
   </symbol>
 </svg>
 
 <!-- ================= 1 · COVER ================= -->
 <section class="slide cover">
-  <div class="iris cover-iris"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg><div>OTTICA&nbsp;CLIENTI<span class="sub">ACQUISIZIONE PAZIENTI</span></div></div>
-    <div class="vs">PROPOSTA&nbsp;PER</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg><div>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO<span class="sub">FIRENZE</span></div></div>
-  </div>
-  <div class="pad">
-    <div class="eyebrow">Proposta di collaborazione · 2026</div>
-    <h1>Agenda piena.<br>Pazienti in <span class="accent">target.</span></h1>
-    <div class="for">Un sistema di acquisizione pazienti costruito su misura per <b>Centro Ottico Fiorentino</b> e la sua contattologia avanzata.</div>
-  </div>
-  <div class="cover-meta">
-    <div><div class="lab">Preparato per</div><div class="val">Centro Ottico Fiorentino</div></div>
-    <div><div class="lab">Obiettivo</div><div class="val">Acquisizione pazienti & agenda piena</div></div>
-    <div><div class="lab">Durata</div><div class="val">4 mesi · a risultato</div></div>
+  <div class="iris-wrap"><img src="assets/img/iris-line.svg"></div>
+  <div class="veil"></div>
+  <div class="cover-pad">
+    <div class="big-oc lock oc">
+      <svg class="ic"><use href="#ico-oc"/></svg>
+      <div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div>
+    </div>
+    <div class="center">
+      <div class="eyebrow">Proposta di collaborazione · 2026</div>
+      <h1>Agenda piena.<br>Pazienti in <span class="em">target.</span></h1>
+      <div class="sub">Un sistema di acquisizione pazienti costruito su misura per <b>Centro Ottico Fiorentino</b> e la sua contattologia avanzata.</div>
+    </div>
+    <div class="prep">
+      <div class="plab">Preparato<br>per</div>
+      <div class="big-cof lock cof">
+        <svg class="ic"><use href="#ico-cof"/></svg>
+        <div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= 2 · AGENDA ================= -->
+<!-- ================= 2 · INDICE ================= -->
 <section class="slide">
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">00</span>Indice</div>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="kicker"><span class="sn">00</span>Indice</div>
     <h2 class="h2" style="margin-top:18px">Cosa vedremo insieme.</h2>
     <div class="lead" style="margin-top:14px">Una proposta concreta: dal problema al sistema che riempie l'agenda di pazienti giusti, in modo misurabile.</div>
-    <div class="cards c4" style="margin-top:46px">
-      <div class="card"><div class="topline"></div><div class="idx">01 — 02</div><h3>Situazione &amp; Punti di forza</h3><p>Dove siete oggi e la leva competitiva da sfruttare.</p></div>
-      <div class="card"><div class="topline"></div><div class="idx">03 — 04</div><h3>Soluzione &amp; Metodo VTR</h3><p>La filosofia e il sistema Visita · Torna · Raccomanda.</p></div>
-      <div class="card"><div class="topline"></div><div class="idx">05 — 07</div><h3>Lista, Campagne &amp; Piano</h3><p>L'asset di proprietà, le due campagne e i 4 mesi.</p></div>
-      <div class="card"><div class="topline"></div><div class="idx">08 — 09</div><h3>Esclusiva &amp; Investimento</h3><p>Territorio riservato, investimento e garanzia.</p></div>
+    <div class="grid g4" style="margin-top:52px">
+      <div class="card"><div class="topdot"><span>01</span></div><h3>Situazione &amp; Punti di forza</h3><p>Dove siete oggi e la leva competitiva da sfruttare.</p></div>
+      <div class="card"><div class="topdot"><span>02</span></div><h3>Soluzione &amp; Metodo VTR</h3><p>La filosofia e il sistema Visita · Torna · Raccomanda.</p></div>
+      <div class="card"><div class="topdot"><span>03</span></div><h3>Lista, Campagne &amp; Piano</h3><p>L'asset di proprietà, le due campagne e i 4 mesi.</p></div>
+      <div class="card"><div class="topdot"><span>04</span></div><h3>Esclusiva &amp; Investimento</h3><p>Territorio riservato, investimento e garanzia.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Ottica Clienti</span><span class="bar"></span><span>02 / 13</span></div>
+  <div class="foot"><span>Proposta riservata · Centro Ottico Fiorentino</span><span class="ln"></span><span>02 / 13</span></div>
 </section>
 
 <!-- ================= 3 · SITUAZIONE ================= -->
 <section class="slide">
-  <div class="iris" style="right:-260px;top:-200px;width:620px;height:620px;opacity:.5"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">01</span>Situazione attuale</div>
-    <h2 class="h2" style="margin-top:18px">Il problema.</h2>
-    <div class="cards c3">
-      <div class="card"><div class="topline"></div><div class="idx">01</div><h3>Competenza alta,<br>visibilità zero</h3><p>Ortocheratologia, lenti sclerali, cheratocono, multifocali. Ma là fuori quasi nessuno lo sa: i pazienti giusti non sanno che esistete.</p></div>
-      <div class="card"><div class="topline"></div><div class="idx">02</div><h3>Pazienti lasciati<br>al passaparola</h3><p>Niente campagne, niente lista contatti, niente sistema. Chi arriva, arriva per caso. Una nicchia così va intercettata, non aspettata.</p></div>
-      <div class="card"><div class="topline"></div><div class="idx">03</div><h3>Agenda<br>imprevedibile</h3><p>Settimane piene e settimane vuote. Senza un flusso costante di nuovi pazienti in target è impossibile pianificare e crescere.</p></div>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="bignum">01</div>
+    <div class="kicker"><span class="sn">01</span>Situazione attuale</div>
+    <h2 class="h2" style="margin-top:16px">Il problema.</h2>
+    <div class="grid g3" style="margin-top:36px">
+      <div class="card"><div class="topdot"><span>01</span></div><h3>Competenza alta,<br>visibilità zero</h3><p>Ortocheratologia, lenti sclerali, cheratocono, multifocali. Ma là fuori quasi nessuno lo sa: i pazienti giusti non sanno che esistete.</p></div>
+      <div class="card"><div class="topdot"><span>02</span></div><h3>Pazienti lasciati<br>al passaparola</h3><p>Niente campagne, niente lista contatti, niente sistema. Chi arriva, arriva per caso. Una nicchia così va intercettata, non aspettata.</p></div>
+      <div class="card"><div class="topdot"><span>03</span></div><h3>Agenda<br>imprevedibile</h3><p>Settimane piene e settimane vuote. Senza un flusso costante di nuovi pazienti in target è impossibile pianificare e crescere.</p></div>
     </div>
-    <div class="lead" style="margin-top:26px;color:var(--ink);font-weight:500">Una competenza rara merita un sistema all'altezza. Non il caso.</div>
+    <div class="lead" style="margin-top:30px;color:var(--ink);font-weight:500">Una competenza rara merita un sistema all'altezza. <span class="em">Non il caso.</span></div>
   </div>
-  <div class="foot"><span>01 · Situazione attuale</span><span class="bar"></span><span>03 / 13</span></div>
+  <div class="foot"><span>01 · Situazione attuale</span><span class="ln"></span><span>03 / 13</span></div>
 </section>
 
 <!-- ================= 4 · PUNTI DI FORZA ================= -->
 <section class="slide">
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">02</span>Punti di forza</div>
-    <h2 class="h2" style="margin-top:18px">Su cosa faremo leva.</h2>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="bignum">02</div>
+    <div class="kicker"><span class="sn">02</span>Punti di forza</div>
+    <h2 class="h2" style="margin-top:16px">Su cosa faremo leva.</h2>
     <div class="lead" style="margin-top:12px">Avete un posizionamento raro e distintivo. Una competenza che non va inventata — solo comunicata alle persone giuste.</div>
-    <div class="cards c4">
-      <div class="card"><div class="topline"></div><div class="tag">Specializzazione</div><h3>Contattologia avanzata</h3><p>Ortocheratologia, lenti sclerali, multifocali, cheratocono: una competenza che pochissimi centri offrono davvero.</p></div>
-      <div class="card"><div class="topline"></div><div class="tag">Nicchia precisa</div><h3>Pazienti ad alto valore</h3><p>Chi cerca queste soluzioni ha un bisogno reale e urgente. Target chiaro = messaggi precisi = pubblicità efficiente.</p></div>
-      <div class="card"><div class="topline"></div><div class="tag">Soluzione, non prodotto</div><h3>Risolvete problemi veri</h3><p>Non vendete un paio di occhiali: cambiate la vita a chi convive con cheratocono o forte ametropia. Valore percepito altissimo.</p></div>
-      <div class="card"><div class="topline"></div><div class="tag">Riferimento locale</div><h3>Pochi come voi a Firenze</h3><p>Nella vostra area siete tra i pochi a offrire questo livello. Manca solo il sistema per farlo sapere ai pazienti.</p></div>
+    <div class="grid g4" style="margin-top:38px">
+      <div class="card"><div class="tag">Specializzazione</div><h3>Contattologia avanzata</h3><p>Ortocheratologia, lenti sclerali, multifocali, cheratocono: una competenza che pochissimi centri offrono davvero.</p></div>
+      <div class="card"><div class="tag">Nicchia precisa</div><h3>Pazienti ad alto valore</h3><p>Chi cerca queste soluzioni ha un bisogno reale e urgente. Target chiaro = messaggi precisi = pubblicità efficiente.</p></div>
+      <div class="card"><div class="tag">Soluzione, non prodotto</div><h3>Risolvete problemi veri</h3><p>Non vendete un paio di occhiali: cambiate la vita a chi convive con cheratocono o forte ametropia. Valore percepito altissimo.</p></div>
+      <div class="card"><div class="tag">Riferimento locale</div><h3>Pochi come voi a Firenze</h3><p>Nella vostra area siete tra i pochi a offrire questo livello. Manca solo il sistema per farlo sapere ai pazienti.</p></div>
     </div>
   </div>
-  <div class="foot"><span>02 · Punti di forza</span><span class="bar"></span><span>04 / 13</span></div>
+  <div class="foot"><span>02 · Punti di forza</span><span class="ln"></span><span>04 / 13</span></div>
 </section>
 
 <!-- ================= 5 · SOLUZIONE ================= -->
 <section class="slide">
-  <div class="iris" style="left:-280px;bottom:-240px;width:640px;height:640px;opacity:.45"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">03</span>La soluzione</div>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="bignum">03</div>
+    <div class="kicker"><span class="sn">03</span>La soluzione</div>
     <div class="split">
-      <div class="col-l">
-        <h2 class="h2">La nostra filosofia.</h2>
-        <div class="lead" style="margin-top:18px">La pubblicità deve generare <b style="color:var(--ink)">pazienti e appuntamenti</b>.<br>Non like. Non follower. Non vanity metrics.</div>
+      <div class="l">
+        <h2 class="h2">La nostra<br>filosofia.</h2>
+        <div class="lead" style="margin-top:20px">La pubblicità deve generare <b>pazienti e appuntamenti.</b> Non like. Non follower. Non vanity metrics.</div>
         <div class="pill" style="margin-top:28px"><span class="d"></span>Risultati misurabili, non promesse</div>
       </div>
-      <div class="col-r">
-        <ul class="ul num" style="gap:22px">
-          <li style="padding-left:42px"><span class="mk">I</span><b style="color:var(--ink)">Prima i pazienti in target.</b><br>Intercettiamo subito, nella vostra zona, chi cerca ortocheratologia, lenti sclerali e soluzioni per il cheratocono. Li qualifichiamo. Arrivano pronti.</li>
-          <li style="padding-left:42px"><span class="mk">II</span><b style="color:var(--ink)">Poi il sistema.</b><br>Un flusso strutturato: campagne mirate, lista contatti di proprietà del centro, follow-up automatici per non perdere nessun paziente.</li>
-          <li style="padding-left:42px"><span class="mk">III</span><b style="color:var(--ink)">L'obiettivo finale.</b><br>Creare autonomia. Un'agenda che si riempie in modo costante e misurabile, senza dipendere dal passaparola o dalla fortuna.</li>
+      <div class="r">
+        <ul class="steps">
+          <li><div class="mk">I</div><h4>Prima i pazienti in target</h4><p>Intercettiamo subito, nella vostra zona, chi cerca ortocheratologia, lenti sclerali e soluzioni per il cheratocono. Li qualifichiamo: arrivano pronti.</p></li>
+          <li><div class="mk">II</div><h4>Poi il sistema</h4><p>Un flusso strutturato: campagne mirate, lista contatti di proprietà del centro, follow-up automatici per non perdere nessun paziente.</p></li>
+          <li><div class="mk">III</div><h4>L'obiettivo finale</h4><p>Creare autonomia. Un'agenda che si riempie in modo costante e misurabile, senza dipendere dal passaparola o dalla fortuna.</p></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="foot"><span>03 · La soluzione</span><span class="bar"></span><span>05 / 13</span></div>
+  <div class="foot"><span>03 · La soluzione</span><span class="ln"></span><span>05 / 13</span></div>
 </section>
 
 <!-- ================= 6 · METODO VTR ================= -->
 <section class="slide">
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">04</span>Il metodo</div>
-    <h2 class="h2" style="margin-top:18px">Il sistema VTR.</h2>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="kicker"><span class="sn">04</span>Il metodo</div>
+    <h2 class="h2" style="margin-top:16px">Il sistema <span class="em">VTR.</span></h2>
     <div class="lead" style="margin-top:10px">Visita · Torna · Raccomanda — il ciclo che trasforma una campagna in un sistema che si auto-alimenta.</div>
-    <div class="vtr">
-      <div class="vstep"><div class="letter">V</div><h3>Visita</h3>
-        <ul class="ul"><li>Campagne su Meta mirate per zona</li><li>Creatività sulla contattologia avanzata</li><li>Offerta d'ingresso che attrae pazienti in target</li><li>Qualifica del paziente prima dell'appuntamento</li></ul>
-      </div>
-      <div class="vstep"><div class="letter">T</div><h3>Torna</h3>
-        <ul class="ul"><li>Percorso di controlli e applicazioni</li><li>Rinnovo lenti programmato (ricavo ricorrente)</li><li>Follow-up automatici via WhatsApp ed email</li><li>Il paziente resta legato al vostro centro</li></ul>
-      </div>
-      <div class="vstep"><div class="letter">R</div><h3>Raccomanda</h3>
-        <ul class="ul"><li>Meccaniche di referral attivate</li><li>I pazienti soddisfatti diventano ambassador</li><li>Ogni paziente ne porta di nuovi</li><li>Il sistema diventa autonomo e auto-alimentato</li></ul>
-      </div>
+    <div class="grid g3" style="margin-top:34px">
+      <div class="card"><div class="tag" style="font-size:13px">V — Visita</div><ul class="ul" style="margin-top:16px"><li>Campagne su Meta mirate per zona</li><li>Creatività sulla contattologia avanzata</li><li>Offerta d'ingresso che attrae pazienti in target</li><li>Qualifica del paziente prima dell'appuntamento</li></ul></div>
+      <div class="card"><div class="tag" style="font-size:13px">T — Torna</div><ul class="ul" style="margin-top:16px"><li>Percorso di controlli e applicazioni</li><li>Rinnovo lenti programmato (ricavo ricorrente)</li><li>Follow-up automatici via WhatsApp ed email</li><li>Il paziente resta legato al vostro centro</li></ul></div>
+      <div class="card"><div class="tag" style="font-size:13px">R — Raccomanda</div><ul class="ul" style="margin-top:16px"><li>Meccaniche di referral attivate</li><li>I pazienti soddisfatti diventano ambassador</li><li>Ogni paziente ne porta di nuovi</li><li>Il sistema diventa autonomo e auto-alimentato</li></ul></div>
     </div>
   </div>
-  <div class="foot"><span>04 · Il metodo VTR</span><span class="bar"></span><span>06 / 13</span></div>
+  <div class="foot"><span>04 · Il metodo VTR</span><span class="ln"></span><span>06 / 13</span></div>
 </section>
 
 <!-- ================= 7 · LISTA CONTATTI ================= -->
 <section class="slide">
-  <div class="iris" style="right:-300px;top:50%;transform:translateY(-50%);width:680px;height:680px;opacity:.4"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">05</span>Il punto di partenza</div>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="bignum">05</div>
+    <div class="kicker"><span class="sn">05</span>Il punto di partenza</div>
     <div class="split">
-      <div class="col-l">
+      <div class="l">
         <h2 class="h2">La lista contatti:<br>il primo asset.</h2>
         <div class="pill" style="margin-top:26px"><span class="d"></span>La lista è vostra. Per sempre.</div>
         <div class="lead" style="margin-top:20px;font-size:16px">A differenza di portali e aggregatori, la lista contatti che costruiamo insieme appartiene al vostro centro. Zero dipendenze da piattaforme esterne.</div>
       </div>
-      <div class="col-r">
-        <ul class="ul num" style="gap:20px">
-          <li style="padding-left:44px"><span class="mk" style="font-size:15px">01</span><b style="color:var(--ink)">Analisi lista esistente.</b><br>Se avete già contatti (gestionale, WhatsApp, email), partiamo da lì: richiami controlli e rinnovi, subito.</li>
-          <li style="padding-left:44px"><span class="mk" style="font-size:15px">02</span><b style="color:var(--ink)">Campagna di riattivazione.</b><br>Un messaggio mirato ai pazienti già in archivio. Appuntamenti immediati, zero costi pubblicitari.</li>
-          <li style="padding-left:44px"><span class="mk" style="font-size:15px">03</span><b style="color:var(--ink)">Costruzione lista nuova.</b><br>Le campagne raccolgono nuovi contatti in target. La lista cresce ogni mese e resta di vostra proprietà.</li>
+      <div class="r">
+        <ul class="steps">
+          <li><div class="mk" style="font-size:15px">01</div><h4>Analisi lista esistente</h4><p>Se avete già contatti (gestionale, WhatsApp, email), partiamo da lì: richiami controlli e rinnovi, subito.</p></li>
+          <li><div class="mk" style="font-size:15px">02</div><h4>Campagna di riattivazione</h4><p>Un messaggio mirato ai pazienti già in archivio. Appuntamenti immediati, zero costi pubblicitari.</p></li>
+          <li><div class="mk" style="font-size:15px">03</div><h4>Costruzione lista nuova</h4><p>Le campagne raccolgono nuovi contatti in target. La lista cresce ogni mese e resta di vostra proprietà.</p></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="foot"><span>05 · La lista contatti</span><span class="bar"></span><span>07 / 13</span></div>
+  <div class="foot"><span>05 · La lista contatti</span><span class="ln"></span><span>07 / 13</span></div>
 </section>
 
 <!-- ================= 8 · CAMPAGNE ================= -->
 <section class="slide">
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">06</span>Le campagne pubblicitarie</div>
-    <h2 class="h2" style="margin-top:18px">Due campagne. Un obiettivo.</h2>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="kicker"><span class="sn">06</span>Le campagne pubblicitarie</div>
+    <h2 class="h2" style="margin-top:16px">Due campagne. Un obiettivo.</h2>
     <div class="lead" style="margin-top:10px">Riempire l'agenda di pazienti in target, in modo costante, tutto l'anno.</div>
-    <div class="cards c2" style="margin-top:30px">
-      <div class="card" style="padding:32px 30px"><div class="topline"></div><div class="tag">Campagna Ortocheratologia</div><h3 style="font-size:26px">Vedere senza occhiali</h3>
-        <ul class="ul" style="margin-top:14px"><li>Target: genitori (controllo miopia figli)</li><li>E giovani adulti attivi e sportivi</li><li>Lenti notturne: di giorno occhi liberi</li><li>Messaggio chiaro e differenziante</li></ul>
-      </div>
-      <div class="card" style="padding:32px 30px"><div class="topline"></div><div class="tag">Campagna Casi complessi</div><h3 style="font-size:26px">Dove gli occhiali non bastano</h3>
-        <ul class="ul" style="margin-top:14px"><li>Target: cheratocono, astigmatismi elevati</li><li>Lenti sclerali e applicazioni difficili</li><li>La soluzione dove altri hanno fallito</li><li>Comunicazione basata sul risultato</li></ul>
-      </div>
+    <div class="grid g2" style="margin-top:34px">
+      <div class="card" style="padding:34px 32px"><div class="tag">Campagna Ortocheratologia</div><h3 style="font-size:27px">Vedere senza occhiali</h3><ul class="ul" style="margin-top:16px"><li>Target: genitori (controllo miopia figli)</li><li>E giovani adulti attivi e sportivi</li><li>Lenti notturne: di giorno occhi liberi</li><li>Messaggio chiaro e differenziante</li></ul></div>
+      <div class="card" style="padding:34px 32px"><div class="tag">Campagna Casi complessi</div><h3 style="font-size:27px">Dove gli occhiali non bastano</h3><ul class="ul" style="margin-top:16px"><li>Target: cheratocono, astigmatismi elevati</li><li>Lenti sclerali e applicazioni difficili</li><li>La soluzione dove altri hanno fallito</li><li>Comunicazione basata sul risultato</li></ul></div>
     </div>
-    <div class="lead" style="margin-top:22px;font-size:15px">Entrambe le campagne vengono monitorate, ottimizzate e scalate in base ai risultati reali.</div>
+    <div class="lead" style="margin-top:24px;font-size:15px">Entrambe le campagne vengono monitorate, ottimizzate e scalate in base ai risultati reali.</div>
   </div>
-  <div class="foot"><span>06 · Le campagne</span><span class="bar"></span><span>08 / 13</span></div>
+  <div class="foot"><span>06 · Le campagne</span><span class="ln"></span><span>08 / 13</span></div>
 </section>
 
 <!-- ================= 9 · PIANO 4 MESI ================= -->
 <section class="slide">
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">07</span>Il piano</div>
-    <h2 class="h2" style="margin-top:18px">4 mesi. Un sistema che funziona.</h2>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="kicker"><span class="sn">07</span>Il piano</div>
+    <h2 class="h2" style="margin-top:16px">4 mesi. Un sistema che funziona.</h2>
     <div class="tl">
-      <div class="tlcol"><div class="tldot"></div><div class="ph">Mese 1</div><div class="mo">Fondamenta</div><div class="nm">Setup &amp; lancio</div>
-        <ul class="ul"><li>Studio del centro e delle specializzazioni</li><li>Definizione dell'offerta d'ingresso</li><li>Creazione creatività pubblicitarie</li><li>Lancio campagne mirate per zona</li></ul>
-      </div>
-      <div class="tlcol"><div class="tldot"></div><div class="ph">Mese 2</div><div class="mo">Ottimizzazione</div><div class="nm">Dati &amp; test</div>
-        <ul class="ul"><li>Monitoraggio giornaliero delle campagne</li><li>A/B test su creatività e audience</li><li>Ottimizzazione del costo per paziente</li><li>Aggiustamenti sulla base dei dati</li></ul>
-      </div>
-      <div class="tlcol"><div class="tldot"></div><div class="ph">Mese 3 — 4</div><div class="mo">Scaling</div><div class="nm">Crescita &amp; autonomia</div>
-        <ul class="ul"><li>Scaling delle campagne migliori</li><li>Stop alle campagne non performanti</li><li>Lista contatti aggiornata e in crescita</li><li>Sistema di acquisizione consolidato</li></ul>
-      </div>
+      <div class="tlcol"><div class="tlbar"><div class="fill"></div></div><div class="ph">Mese 1 · Fondamenta</div><div class="mo">Setup &amp; lancio</div><ul class="ul"><li>Studio del centro e delle specializzazioni</li><li>Definizione dell'offerta d'ingresso</li><li>Creazione creatività pubblicitarie</li><li>Lancio campagne mirate per zona</li></ul></div>
+      <div class="tlcol"><div class="tlbar"><div class="fill" style="width:60%"></div></div><div class="ph">Mese 2 · Ottimizzazione</div><div class="mo">Dati &amp; test</div><ul class="ul"><li>Monitoraggio giornaliero delle campagne</li><li>A/B test su creatività e audience</li><li>Ottimizzazione del costo per paziente</li><li>Aggiustamenti sulla base dei dati</li></ul></div>
+      <div class="tlcol"><div class="tlbar"><div class="fill" style="width:100%"></div></div><div class="ph">Mese 3 — 4 · Scaling</div><div class="mo">Crescita &amp; autonomia</div><ul class="ul"><li>Scaling delle campagne migliori</li><li>Stop alle campagne non performanti</li><li>Lista contatti aggiornata e in crescita</li><li>Sistema di acquisizione consolidato</li></ul></div>
     </div>
-    <div class="lead" style="margin-top:8px;font-size:15px">Ogni azione è tracciata e rendicontata. Saprete sempre dove sono i vostri soldi e che risultati stanno generando.</div>
+    <div class="lead" style="margin-top:40px;font-size:15px">Ogni azione è tracciata e rendicontata. Saprete sempre dove sono i vostri soldi e che risultati stanno generando.</div>
   </div>
-  <div class="foot"><span>07 · Il piano</span><span class="bar"></span><span>09 / 13</span></div>
+  <div class="foot"><span>07 · Il piano</span><span class="ln"></span><span>09 / 13</span></div>
 </section>
 
 <!-- ================= 10 · ESCLUSIVA ================= -->
 <section class="slide">
-  <div class="iris" style="right:-240px;bottom:-260px;width:660px;height:660px;opacity:.5"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">08</span>Bonus esclusivo</div>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="bignum">08</div>
+    <div class="kicker"><span class="sn">08</span>Bonus esclusivo</div>
     <div class="split">
-      <div class="col-l">
-        <h2 class="h2">Esclusiva di zona.</h2>
-        <div class="lead" style="margin-top:16px">Una sola realtà di contattologia avanzata per area. <b style="color:var(--ink)">I vostri concorrenti restano fuori.</b></div>
-        <div style="margin-top:30px;border:1px solid rgba(22,180,106,.4);background:linear-gradient(160deg,rgba(14,122,72,.18),transparent);border-radius:16px;padding:22px 26px">
-          <div class="tiny" style="color:var(--green2)">Gestionale pazienti incluso</div>
-          <div style="font-family:'Grotesk';font-weight:700;font-size:30px;margin-top:8px"><span class="strike" style="font-size:22px">€ 997</span> &nbsp;<span style="color:var(--green2)">GRATIS</span></div>
-          <div class="lead" style="font-size:14px;margin-top:6px">Compreso nell'offerta.</div>
+      <div class="l">
+        <h2 class="h2">Esclusiva<br>di zona.</h2>
+        <div class="lead" style="margin-top:16px">Una sola realtà di contattologia avanzata per area. <b>I vostri concorrenti restano fuori.</b></div>
+        <div style="margin-top:28px;border:1px solid #cfe6d9;background:linear-gradient(160deg,var(--greenL),var(--greenL2));border-radius:16px;padding:24px 26px">
+          <div class="tag">Gestionale pazienti incluso</div>
+          <div style="font-family:'Grotesk';font-weight:700;font-size:34px;margin-top:10px;color:var(--ink)"><span class="strike" style="font-size:24px;color:var(--faint)">€ 997</span> &nbsp;<span class="em">GRATIS</span></div>
+          <div style="font-size:14px;color:var(--muted);margin-top:6px">Compreso nell'offerta.</div>
         </div>
       </div>
-      <div class="col-r">
-        <ul class="ul" style="gap:24px">
-          <li style="padding-left:30px"><b style="color:var(--ink);font-size:17px">Territorio riservato.</b><br>Lavoriamo con un solo centro di contattologia avanzata per zona. Firmato il contratto, la vostra area di Firenze è bloccata.</li>
-          <li style="padding-left:30px"><b style="color:var(--ink);font-size:17px">Riferimento indiscusso.</b><br>Diventate IL punto di riferimento locale per ortocheratologia e casi complessi. Credibilità e autorevolezza dal giorno uno.</li>
-          <li style="padding-left:30px"><b style="color:var(--ink);font-size:17px">Gestionale incluso.</b><br>Agenda appuntamenti, lista contatti e analytics in un'unica piattaforma. Tutto sotto controllo.</li>
+      <div class="r">
+        <ul class="steps">
+          <li><div class="mk">✓</div><h4>Territorio riservato</h4><p>Lavoriamo con un solo centro di contattologia avanzata per zona. Firmato il contratto, la vostra area di Firenze è bloccata.</p></li>
+          <li><div class="mk">✓</div><h4>Riferimento indiscusso</h4><p>Diventate IL punto di riferimento locale per ortocheratologia e casi complessi. Credibilità e autorevolezza dal giorno uno.</p></li>
+          <li><div class="mk">✓</div><h4>Gestionale incluso</h4><p>Agenda appuntamenti, lista contatti e analytics in un'unica piattaforma. Tutto sotto controllo.</p></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="foot"><span>08 · Esclusiva di zona</span><span class="bar"></span><span>10 / 13</span></div>
+  <div class="foot"><span>08 · Esclusiva di zona</span><span class="ln"></span><span>10 / 13</span></div>
 </section>
 
 <!-- ================= 11 · INVESTIMENTO ================= -->
 <section class="slide">
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">09</span>Investimento &amp; garanzia</div>
-    <h2 class="h2" style="margin-top:18px">Investimento. Cosa garantiamo.</h2>
-    <div class="price">
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="kicker"><span class="sn">09</span>Investimento &amp; garanzia</div>
+    <h2 class="h2" style="margin-top:16px">Investimento. Cosa garantiamo.</h2>
+    <div class="price" style="margin-top:32px">
       <div class="pcard">
-        <div class="tiny" style="color:var(--green2)">Investimento</div>
+        <div class="lab">Investimento</div>
         <div class="amt">€ 4.000</div>
-        <div class="note" style="color:var(--ink);font-weight:500">Durata 4 mesi · Tutto incluso</div>
-        <div class="note" style="margin-top:14px">Gestione campagne · Creatività · Strategia · Reportistica</div>
-        <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;padding-top:24px">
-          <span class="pill" style="font-size:10.5px;padding:6px 12px"><span class="d"></span>Gestionale € 997 incluso</span>
-          <span class="pill" style="font-size:10.5px;padding:6px 12px"><span class="d"></span>Esclusiva di zona</span>
+        <div class="note"><b>Durata 4 mesi · Tutto incluso</b><br>Gestione campagne · Creatività · Strategia · Reportistica</div>
+        <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:9px;padding-top:26px">
+          <span class="pill" style="font-size:11px;padding:7px 14px"><span class="d"></span>Gestionale € 997 incluso</span>
+          <span class="pill" style="font-size:11px;padding:7px 14px"><span class="d"></span>Esclusiva di zona</span>
         </div>
       </div>
       <div class="pcard hi">
-        <div class="tiny" style="color:var(--green2)">Garanzia</div>
-        <div class="amt" style="font-size:54px">Agenda piena.<br>Garantito.</div>
-        <div class="note" style="margin-top:14px;font-size:16px;color:var(--ink)">Lavoriamo a risultato: continuiamo finché il vostro centro non riempie l'agenda di pazienti in target.</div>
-        <div style="margin-top:auto;font-family:'Grotesk';font-weight:700;font-size:20px;color:var(--green2);padding-top:24px">Punto.</div>
+        <div class="lab">Garanzia</div>
+        <div class="amt sm">Agenda piena.<br>Garantito.</div>
+        <div class="note" style="margin-top:8px;font-size:16px"><b>Lavoriamo a risultato:</b> continuiamo finché il vostro centro non riempie l'agenda di pazienti in target.</div>
+        <div style="margin-top:auto;font-family:'Grotesk';font-weight:700;font-size:22px;color:var(--green);padding-top:26px">Punto.</div>
       </div>
     </div>
   </div>
-  <div class="foot"><span>09 · Investimento &amp; garanzia</span><span class="bar"></span><span>11 / 13</span></div>
+  <div class="foot"><span>09 · Investimento &amp; garanzia</span><span class="ln"></span><span>11 / 13</span></div>
 </section>
 
-<!-- ================= 12 · PERCHÉ NOI ================= -->
+<!-- ================= 12 · IN SINTESI ================= -->
 <section class="slide">
-  <div class="iris" style="left:-280px;top:-220px;width:600px;height:600px;opacity:.4"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg>OTTICA&nbsp;CLIENTI</div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO</div>
-  </div>
-  <div class="pad">
-    <div class="kicker"><span class="num">10</span>In sintesi</div>
-    <h2 class="h2" style="margin-top:18px">Perché funziona con voi.</h2>
-    <div class="statrow" style="margin-top:34px;gap:64px">
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="body">
+    <div class="kicker"><span class="sn">10</span>In sintesi</div>
+    <h2 class="h2" style="margin-top:16px">Perché funziona con voi.</h2>
+    <div class="stats" style="margin-top:40px">
       <div class="stat"><div class="big">1</div><div class="lbl">solo centro per zona — esclusiva su Firenze</div></div>
       <div class="stat"><div class="big">4</div><div class="lbl">mesi per un sistema di acquisizione consolidato</div></div>
       <div class="stat"><div class="big">0</div><div class="lbl">dipendenza da portali: la lista è vostra</div></div>
       <div class="stat"><div class="big">100%</div><div class="lbl">a risultato: si lavora finché l'agenda è piena</div></div>
     </div>
-    <div class="cards c3" style="margin-top:48px">
-      <div class="card"><div class="topline"></div><h3>Specializzazione &nbsp;→ &nbsp;domanda</h3><p>Trasformiamo una competenza rara in pazienti reali, intercettando chi cerca proprio le vostre soluzioni.</p></div>
-      <div class="card"><div class="topline"></div><h3>Sistema &nbsp;→ &nbsp;prevedibilità</h3><p>Dall'agenda a singhiozzo a un flusso costante e misurabile, mese dopo mese.</p></div>
-      <div class="card"><div class="topline"></div><h3>Asset &nbsp;→ &nbsp;autonomia</h3><p>Lista di proprietà, referral attivi e gestionale: valore che resta vostro nel tempo.</p></div>
+    <div class="grid g3" style="margin-top:48px">
+      <div class="card"><h3>Specializzazione → domanda</h3><p>Trasformiamo una competenza rara in pazienti reali, intercettando chi cerca proprio le vostre soluzioni.</p></div>
+      <div class="card"><h3>Sistema → prevedibilità</h3><p>Dall'agenda a singhiozzo a un flusso costante e misurabile, mese dopo mese.</p></div>
+      <div class="card"><h3>Asset → autonomia</h3><p>Lista di proprietà, referral attivi e gestionale: valore che resta vostro nel tempo.</p></div>
     </div>
   </div>
-  <div class="foot"><span>10 · In sintesi</span><span class="bar"></span><span>12 / 13</span></div>
+  <div class="foot"><span>10 · In sintesi</span><span class="ln"></span><span>12 / 13</span></div>
 </section>
 
-<!-- ================= 13 · CLOSING ================= -->
+<!-- ================= 13 · CHIUSURA ================= -->
 <section class="slide closing">
-  <div class="iris cover-iris" style="opacity:.7"></div>
-  <div class="topbar">
-    <div class="wm"><svg class="ico ico-oc"><use href="#ico-oc"/></svg><div>OTTICA&nbsp;CLIENTI<span class="sub">ACQUISIZIONE PAZIENTI</span></div></div>
-    <div class="wm client"><svg class="ico ico-cof"><use href="#ico-cof"/></svg><div>CENTRO&nbsp;OTTICO&nbsp;FIORENTINO<span class="sub">FIRENZE</span></div></div>
-  </div>
-  <div class="pad">
-    <div class="kicker">Iniziamo</div>
-    <h1 style="margin-top:20px">Una competenza straordinaria<br>merita un sistema <span style="color:var(--green2)">straordinario.</span></h1>
-    <div class="cta">
-      <span class="btn">Blocchiamo l'esclusiva su Firenze</span>
-      <span class="mail">Scrivici a &nbsp;<b>otticaclienti@gmail.com</b></span>
+  <div class="iris-wrap"><img src="assets/img/iris-line.svg"></div>
+  <header class="top">
+    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
+    <div class="lock cof"><svg class="ic"><use href="#ico-cof"/></svg><div class="wmtxt"><span class="l1">CENTRO OTTICO</span><span class="l2">FIORENTINO</span></div></div>
+  </header>
+  <div class="closing-pad">
+    <div class="center">
+      <div class="eyebrow">Iniziamo</div>
+      <h1>Una competenza straordinaria<br>merita un sistema <span class="em">straordinario.</span></h1>
+      <div class="cta">
+        <span class="btn">Blocchiamo l'esclusiva su Firenze</span>
+        <span class="mail">Scrivici a &nbsp;<b>otticaclienti@gmail.com</b></span>
+      </div>
     </div>
   </div>
-  <div class="foot"><span>Ottica Clienti · Proposta per Centro Ottico Fiorentino · 2026</span><span class="bar"></span><span>13 / 13</span></div>
+  <div class="foot"><span>Ottica Clienti · Proposta per Centro Ottico Fiorentino · 2026</span><span class="ln"></span><span>13 / 13</span></div>
 </section>
 
 </body>

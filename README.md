@@ -36,6 +36,9 @@ di acquisizione pazienti di **Ottica Clienti** a **Centro Ottico Fiorentino** (F
 - Per inserire un **logo immagine** reale: salvalo in `assets/img/` (es. `logo-cof.svg`)
   e sostituisci il blocco `.wm.client` nella `.topbar` con un `<img>`. Poi `./build.sh`.
 
-## Palette
-- Verde brand: `#0E7A48` (accento luminoso `#16b46a`)
-- Fondo: nero/verde scurissimo `#050807`
+## Design
+- Tema **chiaro** (sfondo bianco), stile editoriale premium con ampi spazi.
+- Verde brand Ottica Clienti `#0E7A48` come accento primario; rosso COF `#b21f27` come secondario.
+- Loghi ricostruiti in SVG vettoriale e usati in grande in copertina/chiusura.
+- Motivo "iride/lente" in line-art vettoriale (`assets/img/iris-line.svg`).
+- Chiusura su fondo scuro per contrasto/impatto finale.
