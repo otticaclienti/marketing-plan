@@ -37,7 +37,6 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .lock.oxo .wmtxt{font-family:'Grotesk';font-weight:700;color:var(--ink);letter-spacing:.04em;line-height:1}
 .lock.oxo .wmtxt .x{color:var(--teal)}
 .lock.oxo .sub{font-family:'Manrope';font-weight:500;letter-spacing:.26em;color:var(--faint);text-transform:uppercase;display:block;margin-top:3px}
-
 .top .lock.oc .ic{height:30px}
 .top .lock.oc .wmtxt{font-size:14px}
 .top .lock.oxo .ic{height:26px}
@@ -47,45 +46,85 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .kicker{display:flex;align-items:center;gap:14px;font-family:'Grotesk';font-weight:500;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--green)}
 .kicker::before{content:"";width:30px;height:2px;background:var(--green);display:block}
 .kicker .sn{font-weight:700;color:var(--faint)}
-.h1{font-family:'Grotesk';font-weight:700;font-size:60px;line-height:1.03;letter-spacing:-.02em;color:var(--ink)}
-.h2{font-family:'Grotesk';font-weight:700;font-size:48px;line-height:1.05;letter-spacing:-.018em;color:var(--ink)}
-.lead{font-size:19px;line-height:1.58;color:var(--muted);font-weight:400;max-width:790px}
+.h1{font-family:'Grotesk';font-weight:700;font-size:58px;line-height:1.05;letter-spacing:-.02em;color:var(--ink)}
+.h2{font-family:'Grotesk';font-weight:700;font-size:46px;line-height:1.06;letter-spacing:-.018em;color:var(--ink)}
+.lead{font-size:19px;line-height:1.58;color:var(--muted);font-weight:400;max-width:820px}
 .lead b{color:var(--ink);font-weight:700}
 .em{color:var(--green)}
-.body{position:absolute;inset:92px 0 0 0;padding:54px 72px 70px;display:flex;flex-direction:column}
-.bignum{position:absolute;top:74px;right:64px;font-family:'Grotesk';font-weight:700;font-size:230px;line-height:.8;color:var(--greenL);z-index:0;letter-spacing:-.04em}
+.body{position:absolute;inset:92px 0 0 0;padding:50px 72px 70px;display:flex;flex-direction:column}
+.bignum{position:absolute;top:70px;right:64px;font-family:'Grotesk';font-weight:700;font-size:220px;line-height:.8;color:var(--greenL);z-index:0;letter-spacing:-.04em}
 
 .grid{display:grid;gap:22px;position:relative;z-index:1}
 .g3{grid-template-columns:repeat(3,1fr)}
-.g4{grid-template-columns:repeat(4,1fr)}
 .g2{grid-template-columns:repeat(2,1fr)}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:var(--shadowS);position:relative}
 .card .tag{font-family:'Grotesk';font-weight:700;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
-.card h3{font-family:'Grotesk';font-weight:700;font-size:21px;line-height:1.14;letter-spacing:-.01em;margin:13px 0 11px;color:var(--ink)}
-.card p{font-size:14px;line-height:1.55;color:var(--muted)}
+.card h3{font-family:'Grotesk';font-weight:700;font-size:21px;line-height:1.16;letter-spacing:-.01em;margin:13px 0 11px;color:var(--ink)}
+.card p{font-size:14.5px;line-height:1.55;color:var(--muted)}
 .card p b{color:var(--ink)}
 .card .topdot{width:34px;height:34px;border-radius:9px;background:var(--greenL);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .card .topdot span{font-family:'Grotesk';font-weight:700;color:var(--green);font-size:15px}
 
-.ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.ul li{position:relative;padding-left:26px;font-size:14.5px;line-height:1.5;color:#3c4a42}
-.ul li::before{content:"";position:absolute;left:2px;top:8px;width:8px;height:8px;border-radius:2px;background:var(--green)}
-.ul li b{color:var(--ink);font-weight:700}
-
 .split{display:flex;gap:60px;flex:1;align-items:center;position:relative;z-index:1}
 .split .l{flex:0 0 42%}
 .split .r{flex:1}
-
 .steps{list-style:none;display:flex;flex-direction:column;gap:24px}
 .steps li{position:relative;padding-left:64px;min-height:44px}
 .steps .mk{position:absolute;left:0;top:-2px;width:46px;height:46px;border-radius:12px;background:var(--greenL);color:var(--green);font-family:'Grotesk';font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
 .steps h4{font-family:'Grotesk';font-weight:700;font-size:18px;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
 .steps p{font-size:14.5px;line-height:1.5;color:var(--muted)}
-.steps p b{color:var(--ink)}
 
-.pill{display:inline-flex;align-items:center;gap:9px;background:var(--greenL);color:var(--greenD);border-radius:30px;padding:9px 18px;font-family:'Grotesk';font-weight:700;font-size:12px;letter-spacing:.04em}
+.pill{display:inline-flex;align-items:center;gap:9px;background:var(--greenL);color:var(--greenD);border-radius:30px;padding:9px 18px;font-family:'Grotesk';font-weight:700;font-size:12px;letter-spacing:.03em}
 .pill .d{width:7px;height:7px;border-radius:50%;background:var(--green)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
+
+/* agenda */
+.agenda{margin-top:34px;border-top:1px solid var(--line);position:relative;z-index:1}
+.arow{display:flex;align-items:center;gap:26px;padding:19px 2px;border-bottom:1px solid var(--line)}
+.arow .an{font-family:'Grotesk';font-weight:700;font-size:17px;color:var(--green);width:40px;flex:none}
+.arow .at{font-family:'Grotesk';font-weight:700;font-size:21px;color:var(--ink);width:330px;flex:none;letter-spacing:-.01em}
+.arow .ad{font-size:15px;color:var(--muted)}
+
+/* org chart */
+.org{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;margin-top:18px}
+.pmcard{display:flex;align-items:center;gap:22px;width:720px;background:linear-gradient(160deg,var(--greenL),var(--greenL2));border:1px solid #cfe6d9;border-radius:16px;padding:20px 26px;box-shadow:var(--shadowS)}
+.pmcard .av{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;font-family:'Grotesk';font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center;flex:none}
+.pmcard .nm{font-family:'Grotesk';font-weight:700;font-size:20px;color:var(--ink)}
+.pmcard .ro{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:700;margin-top:3px}
+.pmcard .ds{font-size:13.5px;color:#3c4a42;margin-top:4px;line-height:1.4}
+.pmcard .vc{margin-left:auto;flex:none;text-align:right;font-family:'Grotesk';font-weight:700;font-size:12px;color:var(--greenD);background:#fff;border:1px solid #cfe6d9;border-radius:10px;padding:10px 14px;line-height:1.3}
+.orgline{width:2px;height:26px;background:var(--hair)}
+.orglbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin:2px 0 14px}
+.orgrow{display:flex;gap:24px;width:720px}
+.ocard{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadowS)}
+.ocard h4{font-family:'Grotesk';font-weight:700;font-size:17px;color:var(--ink);margin-bottom:6px}
+.ocard p{font-size:13.5px;color:var(--muted);line-height:1.45}
+.calband{margin-top:22px;width:720px;display:flex;align-items:center;gap:16px;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 22px}
+.calband .ci{width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none}
+.calband .ct{font-family:'Grotesk';font-weight:700;font-size:15px;color:var(--ink)}
+.calband .cd{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* results / partner */
+.results{display:flex;gap:26px;position:relative;z-index:1;margin-top:6px}
+.rescard{flex:1;border:1px solid var(--line);border-radius:20px;padding:34px 34px;background:var(--paper);box-shadow:var(--shadowS)}
+.rescard.hi{background:linear-gradient(160deg,var(--greenL),var(--greenL2));border-color:#cfe6d9}
+.rescard .big{font-family:'Grotesk';font-weight:700;font-size:66px;line-height:1;letter-spacing:-.03em;color:var(--green)}
+.rescard .cl{font-family:'Grotesk';font-weight:700;font-size:19px;color:var(--ink);margin-top:16px;letter-spacing:-.01em}
+.rescard .ds{font-size:14.5px;color:var(--muted);margin-top:6px;line-height:1.5}
+
+/* price */
+.price{display:flex;gap:26px;position:relative;z-index:1;margin-top:6px}
+.pcard{flex:1;border:1px solid var(--line);border-radius:20px;padding:34px 34px;background:var(--paper);box-shadow:var(--shadowS);display:flex;flex-direction:column}
+.pcard.hi{background:linear-gradient(160deg,var(--tealL),#f0f8f7);border-color:#cce6e3}
+.pcard .lab{font-family:'Grotesk';font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+.pcard.hi .lab{color:var(--teal)}
+.pcard .amt{font-family:'Grotesk';font-weight:700;font-size:58px;line-height:1;letter-spacing:-.03em;color:var(--ink);margin:12px 0 4px}
+.pcard .amt small{font-size:22px;font-weight:700;color:var(--muted);letter-spacing:0}
+.pcard.hi .amt{color:var(--teal)}
+.pcard .note{font-size:14px;color:var(--muted);line-height:1.55}
+.pcard .note b{color:var(--ink)}
+.goalbox{position:relative;z-index:1;margin-top:24px;border-left:3px solid var(--green);background:var(--greenL2);padding:20px 26px;border-radius:0 12px 12px 0}
+.goalbox p{font-size:16px;line-height:1.55;color:var(--ink)}
 
 /* cover */
 .cover .iris-wrap{position:absolute;right:-260px;top:50%;transform:translateY(-50%);width:880px;height:880px;opacity:.9;z-index:0}
@@ -97,55 +136,14 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .cover .big-oc .wmtxt{font-size:38px;letter-spacing:.06em}
 .cover .center{margin-top:auto;margin-bottom:auto}
 .cover .eyebrow{font-family:'Grotesk';font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--green);font-size:14px;margin-bottom:22px}
-.cover h1{font-family:'Grotesk';font-weight:700;font-size:72px;line-height:1.0;letter-spacing:-.025em;color:var(--ink)}
-.cover .sub{margin-top:26px;font-size:21px;line-height:1.5;color:var(--muted);max-width:610px}
+.cover h1{font-family:'Grotesk';font-weight:700;font-size:66px;line-height:1.04;letter-spacing:-.025em;color:var(--ink)}
+.cover .sub{margin-top:26px;font-size:20px;line-height:1.55;color:var(--muted);max-width:640px}
 .cover .sub b{color:var(--ink);font-weight:700}
 .cover .prep{display:flex;align-items:center;gap:26px;padding-top:26px;border-top:1px solid var(--line)}
 .cover .prep .plab{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);line-height:1.5}
 .cover .big-oxo .ic{height:46px}
 .cover .big-oxo .wmtxt{font-size:30px}
 .cover .big-oxo .sub{font-size:10px;margin-top:4px}
-
-/* timeline */
-.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:14px;position:relative;z-index:1}
-.tlcol{padding:30px 30px 0;position:relative}
-.tlcol:not(:first-child){border-left:1px solid var(--line)}
-.tlbar{position:absolute;top:0;left:30px;right:0;height:3px;background:var(--greenL)}
-.tlcol:first-child .tlbar{left:0}
-.tlbar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--green);border-radius:3px}
-.tlcol .ph{font-family:'Grotesk';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:var(--green);margin-top:22px}
-.tlcol .mo{font-family:'Grotesk';font-weight:700;font-size:25px;color:var(--ink);margin:7px 0 16px;letter-spacing:-.01em}
-
-/* ROI two-panel */
-.roi{display:flex;gap:26px;flex:1;align-items:stretch;position:relative;z-index:1;margin-top:8px}
-.rcard{flex:1;border:1px solid var(--line);border-radius:20px;padding:34px 34px;background:var(--paper);box-shadow:var(--shadowS);display:flex;flex-direction:column}
-.rcard.hi{background:linear-gradient(160deg,var(--greenL),var(--greenL2));border-color:#cfe6d9}
-.rcard .lab{font-family:'Grotesk';font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
-.costrow{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--hair)}
-.costrow .k{font-size:15px;color:var(--muted)}
-.costrow .v{font-family:'Grotesk';font-weight:700;font-size:19px;color:var(--ink)}
-.costtot{display:flex;justify-content:space-between;align-items:baseline;margin-top:auto;padding-top:18px}
-.costtot .k{font-family:'Grotesk';font-weight:700;font-size:15px;color:var(--ink)}
-.costtot .v{font-family:'Grotesk';font-weight:700;font-size:30px;color:var(--ink)}
-.bep{font-family:'Grotesk';font-weight:700;font-size:42px;line-height:1.05;color:var(--greenD);letter-spacing:-.02em;margin:6px 0 4px}
-
-/* price */
-.price{display:flex;gap:26px;position:relative;z-index:1;margin-top:8px}
-.pcard{flex:1;border:1px solid var(--line);border-radius:20px;padding:36px 36px;background:var(--paper);box-shadow:var(--shadowS);display:flex;flex-direction:column}
-.pcard.hi{background:linear-gradient(160deg,var(--tealL),#f0f8f7);border-color:#cce6e3}
-.pcard .lab{font-family:'Grotesk';font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
-.pcard.hi .lab{color:var(--teal)}
-.pcard .amt{font-family:'Grotesk';font-weight:700;font-size:64px;line-height:1;letter-spacing:-.03em;color:var(--ink);margin:12px 0 4px}
-.pcard .amt small{font-size:24px;font-weight:700;color:var(--muted);letter-spacing:0}
-.pcard.hi .amt{color:var(--teal)}
-.pcard .note{font-size:14px;color:var(--muted);line-height:1.55}
-.pcard .note b{color:var(--ink)}
-
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative;z-index:1}
-.stat{border-left:2px solid var(--greenL);padding-left:22px}
-.stat .big{font-family:'Grotesk';font-weight:700;font-size:54px;color:var(--green);line-height:1;letter-spacing:-.03em}
-.stat .lbl{font-size:13.5px;color:var(--muted);margin-top:12px;line-height:1.45;padding-right:14px}
 
 /* closing */
 .closing{background:var(--ink)}
@@ -160,20 +158,19 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .closing .top{border-bottom-color:rgba(255,255,255,.12)}
 .closing .center{margin-top:auto;margin-bottom:auto}
 .closing .eyebrow{font-family:'Grotesk';font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:#3ad389;font-size:14px;margin-bottom:22px}
-.closing h1{font-family:'Grotesk';font-weight:700;font-size:60px;line-height:1.04;letter-spacing:-.022em;color:#fff;max-width:900px}
+.closing h1{font-family:'Grotesk';font-weight:700;font-size:54px;line-height:1.06;letter-spacing:-.02em;color:#fff;max-width:880px}
 .closing h1 .em{color:#3ad389}
 .nextsteps{display:flex;gap:40px;margin-top:34px}
-.nextsteps .ns{flex:1;max-width:230px}
+.nextsteps .ns{flex:1;max-width:240px}
 .nextsteps .ns .nsn{font-family:'Grotesk';font-weight:700;font-size:13px;color:#3ad389;letter-spacing:.1em}
 .nextsteps .ns h4{font-family:'Grotesk';font-weight:700;font-size:17px;color:#fff;margin:10px 0 5px}
 .nextsteps .ns p{font-size:13px;color:#aebbb3;line-height:1.45}
 .cta{margin-top:38px;display:flex;align-items:center;gap:22px}
-.cta .btn{font-family:'Grotesk';font-weight:700;font-size:16px;color:#04130c;background:#2fd17e;padding:17px 30px;border-radius:40px}
+.cta .btn{font-family:'Grotesk';font-weight:700;font-size:16px;color:#04130c;background:#2fd17e;padding:16px 30px;border-radius:40px}
 .cta .mail{font-size:15px;color:#aebbb3}
 .cta .mail b{color:#fff;font-weight:700}
 .closing .foot{color:rgba(255,255,255,.45)}
 .closing .foot .ln{background:rgba(255,255,255,.14)}
-.footnote{font-size:11px;color:var(--faint);margin-top:14px;line-height:1.4}
 </style>
 </head>
 <body>
@@ -189,17 +186,14 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
     <circle cx="60" cy="40" r="11.5" fill="#0E7A48"/>
     <circle cx="64.6" cy="35.4" r="3.2" fill="#ffffff"/>
   </symbol>
-  <!-- OcchioXOcchio: monogramma O✕O -->
   <symbol id="ico-oxo" viewBox="0 0 132 60">
     <circle cx="23" cy="30" r="17" fill="none" stroke="currentColor" stroke-width="4.4"/>
     <circle cx="23" cy="30" r="6" fill="currentColor"/>
     <circle cx="109" cy="30" r="17" fill="none" stroke="currentColor" stroke-width="4.4"/>
     <circle cx="109" cy="30" r="6" fill="currentColor"/>
-    <g stroke="#13988e" stroke-width="5" stroke-linecap="round">
-      <line x1="55" y1="19" x2="77" y2="41"/>
-      <line x1="77" y1="19" x2="55" y2="41"/>
-    </g>
+    <g stroke="#13988e" stroke-width="5" stroke-linecap="round"><line x1="55" y1="19" x2="77" y2="41"/><line x1="77" y1="19" x2="55" y2="41"/></g>
   </symbol>
+  <symbol id="ico-cal" viewBox="0 0 24 24"><g fill="none" stroke="#0E7A48" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><line x1="3.5" y1="9.5" x2="20.5" y2="9.5"/><line x1="8" y1="3" x2="8" y2="6.5"/><line x1="16" y1="3" x2="16" y2="6.5"/></g></symbol>
 </svg>
 
 <!-- ============ 1 · COVER ============ -->
@@ -209,9 +203,9 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   <div class="cover-pad">
     <div class="big-oc lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
     <div class="center">
-      <div class="eyebrow">Proposta di collaborazione · Ferrara · 2026</div>
-      <h1>L'agenda piena della vostra<br>contattologia <span class="em">specialistica.</span></h1>
-      <div class="sub">Un sistema chiavi in mano per generare <b>appuntamenti qualificati</b> a Ferrara — dalla pubblicità alla prenotazione in agenda.</div>
+      <div class="eyebrow">Proposta di collaborazione · Ferrara</div>
+      <h1>Nuovi pazienti per la vostra<br>contattologia <span class="em">specialistica.</span></h1>
+      <div class="sub">Una collaborazione per portare in studio, con continuità, le persone della vostra zona che cercano queste soluzioni.</div>
     </div>
     <div class="prep">
       <div class="plab">Preparato<br>per</div>
@@ -220,27 +214,27 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   </div>
 </section>
 
-<!-- ============ 2 · INDICE ============ -->
+<!-- ============ 2 · AGENDA ============ -->
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
     <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
   </header>
   <div class="body">
-    <div class="kicker"><span class="sn">00</span>Indice</div>
-    <h2 class="h2" style="margin-top:18px">Cosa vedremo insieme.</h2>
-    <div class="lead" style="margin-top:14px">Una proposta concreta e misurabile: dall'opportunità di mercato al ritorno sull'investimento, numeri alla mano.</div>
-    <div class="grid g4" style="margin-top:50px">
-      <div class="card"><div class="topdot"><span>01</span></div><h3>Opportunità &amp; sfida</h3><p>Il vostro salto di valore e il gap del mercato di Ferrara.</p></div>
-      <div class="card"><div class="topdot"><span>02</span></div><h3>Soluzione &amp; metodo</h3><p>Il sistema chiavi in mano: campagna, qualifica, segreteria.</p></div>
-      <div class="card"><div class="topdot"><span>03</span></div><h3>Piano &amp; differenza</h3><p>I 6 mesi e perché siamo diversi da chiunque altro.</p></div>
-      <div class="card"><div class="topdot"><span>04</span></div><h3>ROI &amp; investimento</h3><p>I numeri, i termini e i prossimi passi.</p></div>
+    <div class="kicker">Indice</div>
+    <h2 class="h2" style="margin-top:18px">Di cosa parliamo.</h2>
+    <div class="agenda">
+      <div class="arow"><span class="an">01</span><span class="at">Il problema del centro</span><span class="ad">Una competenza di valore che pochi, in zona, conoscono.</span></div>
+      <div class="arow"><span class="an">02</span><span class="at">La soluzione</span><span class="ad">Come portiamo in studio le persone giuste.</span></div>
+      <div class="arow"><span class="an">03</span><span class="at">La nostra organizzazione</span><span class="ad">Chi segue il lavoro e come siamo strutturati.</span></div>
+      <div class="arow"><span class="an">04</span><span class="at">I centri con cui lavoriamo</span><span class="ad">Risultati reali e un rapporto da partner.</span></div>
+      <div class="arow"><span class="an">05</span><span class="at">L'investimento</span><span class="ad">Cifre, condizioni e obiettivo della collaborazione.</span></div>
     </div>
   </div>
-  <div class="foot"><span>Proposta riservata · OcchioXOcchio</span><span class="ln"></span><span>02 / 13</span></div>
+  <div class="foot"><span>Proposta riservata · OcchioXOcchio</span><span class="ln"></span><span>02 / 08</span></div>
 </section>
 
-<!-- ============ 3 · OPPORTUNITÀ ============ -->
+<!-- ============ 3 · PROBLEMA ============ -->
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
@@ -248,19 +242,19 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   </header>
   <div class="body">
     <div class="bignum">01</div>
-    <div class="kicker"><span class="sn">01</span>L'opportunità</div>
-    <h2 class="h2" style="margin-top:16px">Il momento giusto, nel posto giusto.</h2>
+    <div class="kicker"><span class="sn">01</span>Il problema del centro</div>
+    <h2 class="h2" style="margin-top:16px">Una competenza che pochi conoscono.</h2>
     <div class="grid g3" style="margin-top:36px">
-      <div class="card"><div class="tag">Il salto di valore</div><h3>Dalle usa e getta<br>all'alto valore</h3><p>Il passaggio dalle lenti a basso margine alle applicazioni specialistiche: <b>OrthoK, sclerali, controllo della miopia.</b></p></div>
-      <div class="card"><div class="tag">Un gap a Ferrara</div><h3>Solo 1–2 ottici<br>su ~25 in zona</h3><p>Pochissimi offrono questo livello. Oggi i pazienti viaggiano fino a <b>Milano o Roma</b> per essere seguiti.</p></div>
-      <div class="card"><div class="tag">Economia ad alto margine</div><h3>Ticket €800–€1.500<br>+ ricavo ricorrente</h3><p>OrthoK €800–1.500, ibride ~€800. <b>Doppio ricavo:</b> applicazione specialistica e vendita lenti.</p></div>
+      <div class="card"><div class="topdot"><span>01</span></div><h3>Competenza poco visibile</h3><p>Avete uno studio dedicato, strumentazione avanzata e contattologi qualificati. Ma nella vostra zona pochissimi sanno che esistete.</p></div>
+      <div class="card"><div class="topdot"><span>02</span></div><h3>La domanda va altrove</h3><p>Chi cerca ortocheratologia, lenti sclerali o soluzioni per il cheratocono oggi si rivolge a centri lontani, anche a Milano o Roma.</p></div>
+      <div class="card"><div class="topdot"><span>03</span></div><h3>Nessun flusso costante</h3><p>Senza un'attività continua e organizzata, gli appuntamenti restano occasionali e l'agenda è difficile da pianificare.</p></div>
     </div>
-    <div class="lead" style="margin-top:30px;color:var(--ink);font-weight:500">Avete competenza, strumenti e studio dedicato. <span class="em">Manca solo un flusso costante di pazienti giusti.</span></div>
+    <div class="lead" style="margin-top:30px;color:var(--ink);font-weight:500">La competenza c'è. Manca un modo strutturato per farla incontrare con i pazienti giusti.</div>
   </div>
-  <div class="foot"><span>01 · L'opportunità</span><span class="ln"></span><span>03 / 13</span></div>
+  <div class="foot"><span>01 · Il problema del centro</span><span class="ln"></span><span>03 / 08</span></div>
 </section>
 
-<!-- ============ 4 · LA SFIDA ============ -->
+<!-- ============ 4 · SOLUZIONE ============ -->
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
@@ -268,217 +262,117 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   </header>
   <div class="body">
     <div class="bignum">02</div>
-    <div class="kicker"><span class="sn">02</span>La sfida</div>
-    <h2 class="h2" style="margin-top:16px">La competenza c'è. Serve la domanda.</h2>
-    <div class="grid g3" style="margin-top:36px">
-      <div class="card"><div class="topdot"><span>01</span></div><h3>Competenza invisibile</h3><p>Studio dedicato, sala di refrazione di alto livello (topografo Topcon MIA), due contattologi qualificati. Ma là fuori quasi nessuno lo sa.</p></div>
-      <div class="card"><div class="topdot"><span>02</span></div><h3>Nessun team interno</h3><p>Niente tempo, risorse o interesse a costruire marketing in casa. Il B2C va esternalizzato — tutto, a chi lo sa fare.</p></div>
-      <div class="card"><div class="topdot"><span>03</span></div><h3>Agenda da riempire</h3><p>Senza un sistema di acquisizione costante, lo studio specialistico non esprime il potenziale che merita.</p></div>
-    </div>
-    <div class="lead" style="margin-top:30px;color:var(--ink);font-weight:500">Non vi serve un altro strumento. <span class="em">Vi serve un flusso di pazienti.</span></div>
-  </div>
-  <div class="foot"><span>02 · La sfida</span><span class="ln"></span><span>04 / 13</span></div>
-</section>
-
-<!-- ============ 5 · SOLUZIONE / METODO ============ -->
-<section class="slide">
-  <header class="top">
-    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
-  </header>
-  <div class="body">
-    <div class="bignum">03</div>
-    <div class="kicker"><span class="sn">03</span>La soluzione</div>
+    <div class="kicker"><span class="sn">02</span>La soluzione</div>
     <div class="split">
       <div class="l">
-        <h2 class="h2">Un sistema<br>chiavi in mano.</h2>
-        <div class="lead" style="margin-top:20px">Generiamo <b>appuntamenti qualificati.</b> Non like, non follower: pazienti reali, già pronti, nella vostra agenda.</div>
-        <div class="pill" style="margin-top:28px"><span class="d"></span>Voi applicate. Al resto pensiamo noi.</div>
+        <h2 class="h2">Portiamo in studio<br>le persone giuste.</h2>
+        <div class="lead" style="margin-top:20px">Ci occupiamo di far conoscere il vostro studio nella zona e di fissare le prime visite. <b>Voi vi dedicate alle applicazioni.</b></div>
       </div>
       <div class="r">
         <ul class="steps">
-          <li><div class="mk">1</div><h4>Pubblicità che porta pazienti</h4><p>Una campagna Meta (Facebook/Instagram) mirata su chi, nella vostra zona, cerca OrthoK, multifocali e soluzioni per il cheratocono.</p></li>
-          <li><div class="mk">2</div><h4>Qualifica prima dell'appuntamento</h4><p>I prospect compilano un form: filtriamo le richieste serie. Niente curiosi, solo potenziali pazienti reali.</p></li>
-          <li><div class="mk">3</div><h4>Prenotazione gestita da noi</h4><p>La nostra segreteria formata chiama le persone interessate, spiega il servizio e fissa l'appuntamento direttamente nel vostro calendario condiviso.</p></li>
+          <li><div class="mk">1</div><h4>Vi facciamo conoscere</h4><p>Presentiamo il vostro studio, su Facebook e Instagram, alle persone della zona che cercano queste soluzioni.</p></li>
+          <li><div class="mk">2</div><h4>Parliamo con gli interessati</h4><p>La nostra segreteria contatta ogni persona interessata, spiega il servizio e verifica che sia quella giusta per voi.</p></li>
+          <li><div class="mk">3</div><h4>Fissiamo la prima visita</h4><p>Prenotiamo l'appuntamento nel calendario condiviso, negli orari che avete reso disponibili.</p></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="foot"><span>03 · La soluzione</span><span class="ln"></span><span>05 / 13</span></div>
+  <div class="foot"><span>02 · La soluzione</span><span class="ln"></span><span>04 / 08</span></div>
 </section>
 
-<!-- ============ 6 · LA CAMPAGNA ============ -->
+<!-- ============ 5 · ORGANIZZAZIONE ============ -->
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
     <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
   </header>
   <div class="body">
-    <div class="kicker"><span class="sn">04</span>La campagna</div>
-    <h2 class="h2" style="margin-top:16px">Una campagna. Un obiettivo.</h2>
-    <div class="lead" style="margin-top:10px">Una sola campagna Meta, focalizzata e ottimizzata: intercettare a Ferrara chi ha davvero bisogno delle vostre soluzioni.</div>
-    <div class="grid g3" style="margin-top:34px">
-      <div class="card"><div class="tag">Chi intercettiamo</div><ul class="ul" style="margin-top:14px"><li>Genitori per il <b>controllo della miopia</b> dei figli</li><li>Adulti attivi e sportivi (OrthoK, multifocali)</li><li>Casi complessi: <b>cheratocono</b> e astigmatismi elevati</li></ul></div>
-      <div class="card"><div class="tag">Come comunichiamo</div><ul class="ul" style="margin-top:14px"><li>Messaggi chiari sul risultato, non sul prodotto</li><li>Creatività dedicate alla contattologia avanzata</li><li>Offerta d'ingresso che attrae il paziente giusto</li></ul></div>
-      <div class="card"><div class="tag">Come miglioriamo</div><ul class="ul" style="margin-top:14px"><li>Monitoraggio e ottimizzazione continui</li><li>Test su creatività e pubblico</li><li>Budget scalato dove arrivano i risultati</li></ul></div>
-    </div>
-    <div class="lead" style="margin-top:24px;font-size:15px">Una campagna ben fatta batte dieci campagne disperse: tutto il budget lavora su un unico obiettivo misurabile.</div>
-  </div>
-  <div class="foot"><span>04 · La campagna</span><span class="ln"></span><span>06 / 13</span></div>
-</section>
-
-<!-- ============ 7 · LA SEGRETERIA ============ -->
-<section class="slide">
-  <header class="top">
-    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
-  </header>
-  <div class="body">
-    <div class="bignum">05</div>
-    <div class="kicker"><span class="sn">05</span>Il nostro reparto segreteria</div>
-    <div class="split">
-      <div class="l">
-        <h2 class="h2">Non vi giriamo<br>contatti grezzi.</h2>
-        <div class="lead" style="margin-top:18px">La differenza tra un contatto e un paziente è una telefonata fatta bene. <b>Quella telefonata la facciamo noi.</b></div>
-        <div class="pill" style="margin-top:26px"><span class="d"></span>Appuntamenti pronti nel vostro calendario</div>
+    <div class="kicker"><span class="sn">03</span>La nostra organizzazione</div>
+    <h2 class="h2" style="margin-top:14px">Una struttura dedicata a voi.</h2>
+    <div class="lead" style="margin-top:10px;font-size:16px">Un referente unico coordina tutto il lavoro. Ogni settimana ci confrontiamo in videochiamata per vedere l'andamento e decidere insieme cosa migliorare.</div>
+    <div class="org">
+      <div class="pmcard">
+        <div class="av">G</div>
+        <div><div class="nm">Gea</div><div class="ro">Responsabile del progetto</div><div class="ds">Segue tutta la parte operativa ed è il vostro punto di riferimento.</div></div>
+        <div class="vc">Videochiamata<br>settimanale</div>
       </div>
-      <div class="r">
-        <ul class="steps">
-          <li><div class="mk">✓</div><h4>Chiamiamo ogni persona interessata</h4><p>Il nostro reparto di segreteria contatta le persone interessate dalle campagne in tempi rapidi, quando l'interesse è massimo.</p></li>
-          <li><div class="mk">✓</div><h4>Spieghiamo e qualifichiamo</h4><p>Presentiamo il servizio specialistico, rispondiamo ai dubbi e verifichiamo che il paziente sia davvero in target.</p></li>
-          <li><div class="mk">✓</div><h4>Fissiamo l'appuntamento</h4><p>Prenotiamo direttamente nel vostro calendario condiviso. Voi aprite l'agenda e trovate pazienti, non liste da gestire.</p></li>
-        </ul>
+      <div class="orgline"></div>
+      <div class="orglbl">Coordina il team</div>
+      <div class="orgrow">
+        <div class="ocard"><h4>Gestione delle campagne</h4><p>Fa conoscere il vostro studio alle persone giuste della vostra zona.</p></div>
+        <div class="ocard"><h4>Segreteria</h4><p>Si occupa della persona interessata e ne fissa direttamente l'appuntamento.</p></div>
+      </div>
+      <div class="calband">
+        <div class="ci"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
+        <div><div class="ct">Calendario condiviso</div><div class="cd">Tutte le prime visite vengono fissate qui, solo negli orari che rendete disponibili.</div></div>
       </div>
     </div>
   </div>
-  <div class="foot"><span>05 · La segreteria</span><span class="ln"></span><span>07 / 13</span></div>
+  <div class="foot"><span>03 · La nostra organizzazione</span><span class="ln"></span><span>05 / 08</span></div>
 </section>
 
-<!-- ============ 8 · DIFFERENZIATORE ============ -->
+<!-- ============ 6 · PARTNER & RISULTATI ============ -->
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
     <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
   </header>
   <div class="body">
-    <div class="bignum">06</div>
-    <div class="kicker"><span class="sn">06</span>Perché siamo diversi</div>
-    <h2 class="h2" style="margin-top:16px">Un network di centri contattologi.</h2>
-    <div class="grid g3" style="margin-top:36px">
-      <div class="card"><div class="tag">Specializzazione</div><h3>Solo contattologia</h3><p>Non un fornitore generalista: un <b>network di centri specializzati solo in contattologia.</b> A differenza dei competitor che gestiscono anche l'eyewear, conosciamo il vostro paziente.</p></div>
-      <div class="card"><div class="tag">Servizio completo</div><h3>Segreteria inclusa</h3><p>Dalla pubblicità all'appuntamento fissato. Non un pezzo del processo: <b>tutto il percorso</b>, gestito da noi.</p></div>
-      <div class="card"><div class="tag">Esclusiva</div><h3>Solo voi, a Ferrara</h3><p>Lavoriamo con un solo studio di contattologia avanzata per zona. Firmato il contratto, <b>l'area è vostra.</b></p></div>
-    </div>
-    <div class="lead" style="margin-top:30px;color:var(--ink);font-weight:500">Diventate <span class="em">il punto di riferimento locale</span> per OrthoK e casi complessi.</div>
-  </div>
-  <div class="foot"><span>06 · Il differenziatore</span><span class="ln"></span><span>08 / 13</span></div>
-</section>
-
-<!-- ============ 9 · PIANO 6 MESI ============ -->
-<section class="slide">
-  <header class="top">
-    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
-  </header>
-  <div class="body">
-    <div class="kicker"><span class="sn">07</span>Il piano</div>
-    <h2 class="h2" style="margin-top:16px">6 mesi. Un percorso chiaro.</h2>
-    <div class="tl">
-      <div class="tlcol"><div class="tlbar"><div class="fill" style="width:40px"></div></div><div class="ph">Mese 1 · Fondamenta</div><div class="mo">Setup &amp; lancio</div><ul class="ul"><li>Studio dello studio e delle applicazioni</li><li>Definizione dell'offerta d'ingresso</li><li>Creazione campagna e creatività</li><li>Avvio segreteria e calendario condiviso</li></ul></div>
-      <div class="tlcol"><div class="tlbar"><div class="fill" style="width:55%"></div></div><div class="ph">Mesi 2–3 · Ottimizzazione</div><div class="mo">Dati &amp; test</div><ul class="ul"><li>Ottimizzazione costo per appuntamento</li><li>Test su creatività e pubblico</li><li>Affinamento script segreteria</li><li>Reportistica mensile con ROI</li></ul></div>
-      <div class="tlcol"><div class="tlbar"><div class="fill" style="width:100%"></div></div><div class="ph">Mesi 4–6 · Scaling</div><div class="mo">Crescita &amp; autonomia</div><ul class="ul"><li>Scaling del budget dove rende</li><li>Flusso costante di appuntamenti</li><li>Studio riconosciuto come riferimento</li><li>Sistema consolidato e prevedibile</li></ul></div>
-    </div>
-    <div class="lead" style="margin-top:40px;font-size:15px">Ogni mese: report trasparente con spesa, appuntamenti generati e costo per paziente. Sempre numeri, mai promesse.</div>
-  </div>
-  <div class="foot"><span>07 · Il piano</span><span class="ln"></span><span>09 / 13</span></div>
-</section>
-
-<!-- ============ 10 · ROI ============ -->
-<section class="slide">
-  <header class="top">
-    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
-  </header>
-  <div class="body">
-    <div class="kicker"><span class="sn">08</span>Il ritorno sull'investimento</div>
-    <h2 class="h2" style="margin-top:16px">I numeri parlano chiaro.</h2>
-    <div class="roi">
-      <div class="rcard">
-        <div class="lab">Il costo, al mese</div>
-        <div class="costrow"><span class="k">Fee Ottica Clienti</span><span class="v">€ 1.000</span></div>
-        <div class="costrow"><span class="k">Budget ads (€20/giorno)</span><span class="v">~€ 600</span></div>
-        <div class="costtot"><span class="k">Costo pieno mensile</span><span class="v">~€ 1.600</span></div>
+    <div class="kicker"><span class="sn">04</span>I centri con cui lavoriamo</div>
+    <h2 class="h2" style="margin-top:16px">Una collaborazione, non un servizio.</h2>
+    <div class="lead" style="margin-top:12px">Lavoriamo soltanto con centri specializzati in contattologia. Condividiamo gli obiettivi e li misuriamo nel tempo, come fareste con un partner.</div>
+    <div class="results" style="margin-top:30px">
+      <div class="rescard hi">
+        <div class="big">+20%</div>
+        <div class="cl">Ottica Visual Care</div>
+        <div class="ds">Crescita di fatturato e di appuntamenti, ogni mese di collaborazione.</div>
       </div>
-      <div class="rcard hi">
-        <div class="lab">Il ritorno</div>
-        <div class="bep">Bastano 1–2 pazienti<br>al mese per ripagarlo.</div>
-        <div class="note" style="margin-top:8px">Con un ticket di <b>€800–€1.500</b>, una sola applicazione OrthoK copre quasi l'intera fee. Scenario prudente di <b>3–4 nuovi pazienti/mese → €3.000–€6.000</b> di ricavo, oltre alla vendita lenti ricorrente.</div>
-        <div class="chips" style="margin-top:auto;padding-top:22px">
-          <span class="pill" style="background:#fff;color:var(--greenD)"><span class="d"></span>Tutto il resto è margine</span>
-        </div>
+      <div class="rescard hi">
+        <div class="big">€ 15.000</div>
+        <div class="cl">Ottica Contattologia Delpiano</div>
+        <div class="ds">Incassati nei primi due mesi di collaborazione.</div>
       </div>
     </div>
-    <div class="footnote">Scenario illustrativo basato sui ticket medi indicati (OrthoK €800–1.500, ibride ~€800); non costituisce garanzia di risultato. I dati reali vengono rendicontati ogni mese.</div>
+    <div class="lead" style="margin-top:26px;color:var(--ink);font-weight:500">Non vi consegniamo un servizio e ci salutiamo: <span class="em">costruiamo insieme una crescita misurabile.</span></div>
   </div>
-  <div class="foot"><span>08 · ROI</span><span class="ln"></span><span>10 / 13</span></div>
+  <div class="foot"><span>04 · I centri con cui lavoriamo</span><span class="ln"></span><span>06 / 08</span></div>
 </section>
 
-<!-- ============ 11 · INVESTIMENTO ============ -->
+<!-- ============ 7 · INVESTIMENTO ============ -->
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
     <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
   </header>
   <div class="body">
-    <div class="kicker"><span class="sn">09</span>Investimento &amp; termini</div>
-    <h2 class="h2" style="margin-top:16px">Semplice e flessibile.</h2>
+    <div class="kicker"><span class="sn">05</span>L'investimento</div>
+    <h2 class="h2" style="margin-top:16px">Chiaro e orientato alla crescita.</h2>
     <div class="price">
       <div class="pcard">
-        <div class="lab">La nostra fee</div>
-        <div class="amt">€ 1.000<small> /mese</small></div>
-        <div class="note"><b>Fatturazione mensile, senza anticipo.</b> Impegno di 6 mesi. Tutto incluso: strategia, campagna, creatività, reparto segreteria e reportistica.</div>
+        <div class="lab">La collaborazione</div>
+        <div class="amt">€ 6.000</div>
+        <div class="note"><b>6 mesi di lavoro · €1.000 al mese.</b> Coordinamento, gestione delle campagne, segreteria e incontri settimanali: tutto incluso.</div>
       </div>
       <div class="pcard hi">
-        <div class="lab">Budget pubblicitario</div>
+        <div class="lab">La pubblicità</div>
         <div class="amt">€ 20<small> /giorno</small></div>
-        <div class="note">Speso direttamente sulle piattaforme Meta, <b>solo dall'avvio delle sponsorizzate</b> (~€600/mese). Scalabile in base ai risultati. Non è un nostro ricavo.</div>
+        <div class="note">Investiti direttamente sulle piattaforme, dall'avvio (circa €600 al mese). Non sono un nostro compenso.</div>
       </div>
     </div>
-    <div class="chips" style="margin-top:26px;position:relative;z-index:1">
-      <span class="pill"><span class="d"></span>Pagamenti flessibili</span>
+    <div class="goalbox">
+      <p><b>L'obiettivo non è semplicemente recuperare la spesa.</b> È rendere l'attività rivolta ai pazienti una parte redditizia e ben organizzata dell'azienda, capace di crescere nel tempo.</p>
+    </div>
+    <div class="chips" style="margin-top:22px;position:relative;z-index:1">
+      <span class="pill"><span class="d"></span>Pagamento mensile</span>
       <span class="pill"><span class="d"></span>Contratto formale</span>
-      <span class="pill"><span class="d"></span>Reportistica ROI mensile</span>
-      <span class="pill"><span class="d"></span>Esclusiva su Ferrara</span>
+      <span class="pill"><span class="d"></span>Rendicontazione mensile</span>
+      <span class="pill"><span class="d"></span>Esclusiva sulla zona</span>
     </div>
   </div>
-  <div class="foot"><span>09 · Investimento &amp; termini</span><span class="ln"></span><span>11 / 13</span></div>
+  <div class="foot"><span>05 · L'investimento</span><span class="ln"></span><span>07 / 08</span></div>
 </section>
 
-<!-- ============ 12 · PERCHÉ NOI ============ -->
-<section class="slide">
-  <header class="top">
-    <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
-  </header>
-  <div class="body">
-    <div class="kicker"><span class="sn">10</span>In sintesi</div>
-    <h2 class="h2" style="margin-top:16px">Perché Ottica Clienti.</h2>
-    <div class="stats" style="margin-top:38px">
-      <div class="stat"><div class="big">1</div><div class="lbl">solo studio per zona: esclusiva su Ferrara</div></div>
-      <div class="stat"><div class="big">100%</div><div class="lbl">focalizzati solo sulla contattologia</div></div>
-      <div class="stat"><div class="big">1–2</div><div class="lbl">pazienti al mese e l'investimento è ripagato</div></div>
-      <div class="stat"><div class="big">6</div><div class="lbl">mesi, pagamento mensile e flessibile</div></div>
-    </div>
-    <div class="grid g3" style="margin-top:46px">
-      <div class="card"><h3>Genera fatturato</h3><p>Un tool di customer service <b>riduce i costi</b>. Il nostro sistema vi porta pazienti e ricavi: è un investimento, non una spesa.</p></div>
-      <div class="card"><h3>Chiavi in mano</h3><p>Pubblicità, qualifica e segreteria in un unico flusso. Voi vi dedicate solo a ciò che sapete fare meglio: le applicazioni.</p></div>
-      <div class="card"><h3>Trasparenza totale</h3><p>Reportistica mensile, ROI alla mano e contratto formale. Ogni euro speso è tracciato e rendicontato.</p></div>
-    </div>
-  </div>
-  <div class="foot"><span>10 · In sintesi</span><span class="ln"></span><span>12 / 13</span></div>
-</section>
-
-<!-- ============ 13 · CHIUSURA ============ -->
+<!-- ============ 8 · CHIUSURA ============ -->
 <section class="slide closing">
   <div class="iris-wrap"><img src="assets/img/iris-line.svg"></div>
   <header class="top">
@@ -488,19 +382,19 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   <div class="closing-pad">
     <div class="center">
       <div class="eyebrow">Prossimi passi</div>
-      <h1>Costruiamo il riferimento della<br>contattologia a <span class="em">Ferrara.</span></h1>
+      <h1>Costruiamo a Ferrara il riferimento per la<br>contattologia <span class="em">specialistica.</span></h1>
       <div class="nextsteps">
-        <div class="ns"><div class="nsn">01</div><h4>Approvazione</h4><p>Allineamento sulla proposta e sui termini.</p></div>
-        <div class="ns"><div class="nsn">02</div><h4>Contratto formale</h4><p>Stesura e revisione legale, pronto da firmare.</p></div>
-        <div class="ns"><div class="nsn">03</div><h4>Avvio immediato</h4><p>Setup, lancio campagna e prime prenotazioni.</p></div>
+        <div class="ns"><div class="nsn">01</div><h4>Allineamento</h4><p>Condivisione della proposta e delle condizioni.</p></div>
+        <div class="ns"><div class="nsn">02</div><h4>Contratto formale</h4><p>Stesura e revisione, pronto da firmare.</p></div>
+        <div class="ns"><div class="nsn">03</div><h4>Avvio della collaborazione</h4><p>Preparazione, partenza e prime prenotazioni.</p></div>
       </div>
       <div class="cta">
-        <span class="btn">Partiamo subito</span>
+        <span class="btn">Avviamo la collaborazione</span>
         <span class="mail">Scrivici a &nbsp;<b>otticaclienti@gmail.com</b></span>
       </div>
     </div>
   </div>
-  <div class="foot"><span>Ottica Clienti · Proposta per OcchioXOcchio · 2026</span><span class="ln"></span><span>13 / 13</span></div>
+  <div class="foot"><span>Ottica Clienti · Proposta per OcchioXOcchio</span><span class="ln"></span><span>08 / 08</span></div>
 </section>
 
 </body>
