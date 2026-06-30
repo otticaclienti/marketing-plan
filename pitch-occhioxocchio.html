@@ -42,6 +42,16 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .top .lock.oxo .ic{height:26px}
 .top .lock.oxo .wmtxt{font-size:15px}
 .top .lock.oxo .sub{font-size:8px}
+/* OcchioXOcchio — riproduzione fedele del logo */
+.oxo{display:inline-flex;align-items:center;gap:7px;font-family:'Manrope';font-weight:800;letter-spacing:-.012em;color:#0F3D7E;line-height:1}
+.oxo .w1{color:#1B9DD9}
+.oxo .w2{color:currentColor}
+.oxo .mk{height:1.18em;width:auto;display:block;flex:none}
+.top .oxo{font-size:16px}
+.oxo-lock{display:inline-block;text-align:center}
+.oxo-lock .bar{display:block;margin-top:9px;background:#0F3D7E;color:#fff;font-family:'Manrope';font-weight:700;letter-spacing:.3em;text-align:center;border-radius:4px;padding:7px 6px;font-size:11px}
+.oxo-lock.big .oxo{font-size:30px}
+.closing .oxo{color:#fff}
 
 .kicker{display:flex;align-items:center;gap:14px;font-family:'Grotesk';font-weight:500;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--green)}
 .kicker::before{content:"";width:30px;height:2px;background:var(--green);display:block}
@@ -186,12 +196,15 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
     <circle cx="60" cy="40" r="11.5" fill="#0E7A48"/>
     <circle cx="64.6" cy="35.4" r="3.2" fill="#ffffff"/>
   </symbol>
-  <symbol id="ico-oxo" viewBox="0 0 132 60">
-    <circle cx="23" cy="30" r="17" fill="none" stroke="currentColor" stroke-width="4.4"/>
-    <circle cx="23" cy="30" r="6" fill="currentColor"/>
-    <circle cx="109" cy="30" r="17" fill="none" stroke="currentColor" stroke-width="4.4"/>
-    <circle cx="109" cy="30" r="6" fill="currentColor"/>
-    <g stroke="#13988e" stroke-width="5" stroke-linecap="round"><line x1="55" y1="19" x2="77" y2="41"/><line x1="77" y1="19" x2="55" y2="41"/></g>
+  <symbol id="oxo-mark" viewBox="0 0 120 100">
+    <g stroke-linecap="round" fill="none" stroke-width="21">
+      <line x1="24" y1="27" x2="96" y2="77" stroke="#1B9DD9"/>
+      <line x1="96" y1="27" x2="24" y2="77" stroke="currentColor"/>
+    </g>
+    <g transform="rotate(-20 60 47)">
+      <ellipse cx="60" cy="47" rx="28" ry="15.5" fill="#eef5fb" stroke="currentColor" stroke-width="5"/>
+      <path d="M41 49 Q60 60 79 49" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+    </g>
   </symbol>
   <symbol id="ico-cal" viewBox="0 0 24 24"><g fill="none" stroke="#0E7A48" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><line x1="3.5" y1="9.5" x2="20.5" y2="9.5"/><line x1="8" y1="3" x2="8" y2="6.5"/><line x1="16" y1="3" x2="16" y2="6.5"/></g></symbol>
 </svg>
@@ -209,7 +222,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
     </div>
     <div class="prep">
       <div class="plab">Preparato<br>per</div>
-      <div class="big-oxo lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio<span class="sub">Ferrara</span></div></div>
+      <div class="oxo-lock big"><div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div><div class="bar">LENTI A CONTATTO</div></div>
     </div>
   </div>
 </section>
@@ -218,7 +231,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="body">
     <div class="kicker">Sommario</div>
@@ -238,7 +251,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="body">
     <div class="bignum">01</div>
@@ -258,7 +271,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="body">
     <div class="bignum">02</div>
@@ -284,7 +297,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="body">
     <div class="kicker"><span class="sn">03</span>La nostra organizzazione</div>
@@ -315,7 +328,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="body">
     <div class="kicker"><span class="sn">04</span>I centri con cui lavoriamo</div>
@@ -342,7 +355,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 <section class="slide">
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="body">
     <div class="kicker"><span class="sn">05</span>L'investimento</div>
@@ -377,7 +390,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   <div class="iris-wrap"><img src="assets/img/iris-line.svg"></div>
   <header class="top">
     <div class="lock oc"><svg class="ic"><use href="#ico-oc"/></svg><div class="wmtxt"><span>OTTICA</span><span>CLIENTI</span></div></div>
-    <div class="lock oxo"><svg class="ic"><use href="#ico-oxo"/></svg><div class="wmtxt">Occhio<span class="x">X</span>Occhio</div></div>
+    <div class="oxo"><span class="w1">OCCHIO</span><svg class="mk" viewBox="0 0 120 100"><use href="#oxo-mark"/></svg><span class="w2">OCCHIO</span></div>
   </header>
   <div class="closing-pad">
     <div class="center">
