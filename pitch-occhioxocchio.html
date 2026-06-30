@@ -75,9 +75,10 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .card .topdot{width:34px;height:34px;border-radius:9px;background:var(--greenL);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .card .topdot span{font-family:'Grotesk';font-weight:700;color:var(--green);font-size:15px}
 
-.split{display:flex;gap:60px;flex:1;align-items:center;position:relative;z-index:1}
-.split .l{flex:0 0 42%}
-.split .r{flex:1}
+.split{display:flex;gap:60px;flex:1;align-items:stretch;position:relative;z-index:1}
+.split .l{flex:0 0 42%;display:flex;flex-direction:column;justify-content:center}
+.split .r{flex:1;display:flex;flex-direction:column;justify-content:center}
+.split .steps{flex:1;justify-content:space-evenly;gap:0}
 .steps{list-style:none;display:flex;flex-direction:column;gap:24px}
 .steps li{position:relative;padding-left:64px;min-height:44px}
 .steps .mk{position:absolute;left:0;top:-2px;width:46px;height:46px;border-radius:12px;background:var(--greenL);color:var(--green);font-family:'Grotesk';font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
@@ -90,7 +91,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 
 /* agenda */
 .agenda{margin-top:34px;border-top:1px solid var(--line);position:relative;z-index:1}
-.arow{display:flex;align-items:center;gap:26px;padding:19px 2px;border-bottom:1px solid var(--line)}
+.arow{display:flex;align-items:center;gap:26px;padding:26px 2px;border-bottom:1px solid var(--line)}
 .arow .an{font-family:'Grotesk';font-weight:700;font-size:17px;color:var(--green);width:40px;flex:none}
 .arow .at{font-family:'Grotesk';font-weight:700;font-size:21px;color:var(--ink);width:330px;flex:none;letter-spacing:-.01em}
 .arow .ad{font-size:15px;color:var(--muted)}
@@ -113,10 +114,29 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
 .calband .ci{width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none}
 .calband .ct{font-family:'Grotesk';font-weight:700;font-size:15px;color:var(--ink)}
 .calband .cd{font-size:13px;color:var(--muted);margin-top:2px}
+/* organigramma con frecce */
+.orgmap{position:relative;width:880px;height:408px;margin:auto}
+.om-wires{position:absolute;inset:0;width:880px;height:408px;z-index:0}
+.om-card{position:absolute;z-index:1;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadowS)}
+.om-gea{left:170px;top:0;width:540px;height:96px;display:flex;align-items:center;gap:20px;padding:0 26px;background:linear-gradient(160deg,var(--greenL),var(--greenL2));border-color:#cfe6d9}
+.om-gea .av{width:50px;height:50px;border-radius:50%;background:var(--green);color:#fff;font-family:'Grotesk';font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;flex:none}
+.om-gea .nm{font-family:'Grotesk';font-weight:700;font-size:19px;color:var(--ink)}
+.om-gea .ro{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:700;margin-top:3px}
+.om-gea .ds{font-size:13px;color:#3c4a42;margin-top:4px;line-height:1.4}
+.om-gea .vc{margin-left:auto;flex:none;text-align:center;font-family:'Grotesk';font-weight:700;font-size:11.5px;color:var(--greenD);background:#fff;border:1px solid #cfe6d9;border-radius:10px;padding:9px 13px;line-height:1.3}
+.om-role{top:158px;width:320px;height:120px;padding:20px 24px}
+.om-l{left:80px}
+.om-r{left:480px}
+.om-role .rh{font-family:'Grotesk';font-weight:700;font-size:18px;color:var(--ink);margin-bottom:8px}
+.om-role p{font-size:14px;color:var(--muted);line-height:1.5}
+.om-cal{left:170px;top:332px;width:540px;height:74px;display:flex;align-items:center;gap:16px;padding:0 24px;background:var(--cream)}
+.om-cal .ci{width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none}
+.om-cal .ct{font-family:'Grotesk';font-weight:700;font-size:15px;color:var(--ink)}
+.om-cal .cd{font-size:13px;color:var(--muted);margin-top:2px}
 
 /* results / partner */
 .results{display:flex;gap:26px;position:relative;z-index:1;margin-top:6px}
-.rescard{flex:1;border:1px solid var(--line);border-radius:20px;padding:34px 34px;background:var(--paper);box-shadow:var(--shadowS)}
+.rescard{flex:1;border:1px solid var(--line);border-radius:20px;padding:34px 34px;background:var(--paper);box-shadow:var(--shadowS);display:flex;flex-direction:column;justify-content:center}
 .rescard.hi{background:linear-gradient(160deg,var(--greenL),var(--greenL2));border-color:#cfe6d9}
 .rescard .big{font-family:'Grotesk';font-weight:700;font-size:66px;line-height:1;letter-spacing:-.03em;color:var(--green)}
 .rescard .cl{font-family:'Grotesk';font-weight:700;font-size:19px;color:var(--ink);margin-top:16px;letter-spacing:-.01em}
@@ -312,23 +332,29 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
   <header class="top"></header>
   <div class="body">
     <div class="kicker"><span class="sn">03</span>La nostra organizzazione</div>
-    <h2 class="h2" style="margin-top:14px">Un'organizzazione dedicata alla Vostra attività.</h2>
-    <div class="lead" style="margin-top:10px;font-size:16px">Un referente unico coordina l'intera attività. Con cadenza settimanale è previsto un confronto in videochiamata per analizzare l'andamento e definire insieme le ottimizzazioni.</div>
-    <div class="org">
-      <div class="pmcard">
+    <h2 class="h2" style="margin-top:14px">Una struttura dedicata, un solo referente.</h2>
+    <div class="orgmap">
+      <svg class="om-wires" viewBox="0 0 880 408" preserveAspectRatio="none">
+        <g fill="none" stroke="#c2cdc6" stroke-width="2" stroke-linecap="round">
+          <path d="M440 96 V127 M240 127 H640 M240 127 V152 M640 127 V152"/>
+          <path d="M240 278 V303 M640 278 V303 M240 303 H640 M440 303 V326"/>
+        </g>
+        <g fill="#0E7A48">
+          <polygon points="234,150 246,150 240,159"/>
+          <polygon points="634,150 646,150 640,159"/>
+          <polygon points="434,324 446,324 440,333"/>
+        </g>
+      </svg>
+      <div class="om-card om-gea">
         <div class="av">G</div>
-        <div><div class="nm">Gea</div><div class="ro">Responsabile del progetto</div><div class="ds">Coordina l'intera attività operativa ed è il Vostro punto di riferimento.</div></div>
+        <div><div class="nm">Gea</div><div class="ro">Responsabile del progetto</div><div class="ds">Coordina l'intera attività operativa ed è il Vostro punto di riferimento unico.</div></div>
         <div class="vc">Confronto<br>settimanale</div>
       </div>
-      <div class="orgline"></div>
-      <div class="orglbl">Team coordinato</div>
-      <div class="orgrow">
-        <div class="ocard"><h4>Gestione delle campagne</h4><p>Promuove lo studio presso il pubblico corretto del territorio.</p></div>
-        <div class="ocard"><h4>Segreteria</h4><p>Gestisce la persona interessata e ne fissa direttamente l'appuntamento.</p></div>
-      </div>
-      <div class="calband">
+      <div class="om-card om-role om-l"><div class="rh">Gestione delle campagne</div><p>Fa conoscere lo studio alle persone giuste del territorio.</p></div>
+      <div class="om-card om-role om-r"><div class="rh">Segreteria</div><p>Contatta la persona interessata e ne fissa l'appuntamento.</p></div>
+      <div class="om-card om-cal">
         <div class="ci"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
-        <div><div class="ct">Calendario condiviso</div><div class="cd">Le prime visite vengono fissate esclusivamente negli orari da Voi resi disponibili.</div></div>
+        <div><div class="ct">Calendario condiviso</div><div class="cd">Tutte le prime visite vengono fissate qui, negli orari da Voi resi disponibili.</div></div>
       </div>
     </div>
   </div>
@@ -342,7 +368,7 @@ html,body{background:#c9cec6;font-family:'Manrope',sans-serif;color:var(--ink);-
     <div class="kicker"><span class="sn">04</span>I centri con cui lavoriamo</div>
     <h2 class="h2" style="margin-top:16px">Un rapporto di partnership, non una fornitura.</h2>
     <div class="lead" style="margin-top:12px">Collaboriamo esclusivamente con centri specializzati in contattologia. Ne condividiamo gli obiettivi e ne misuriamo i risultati nel tempo, secondo una logica di partnership.</div>
-    <div class="results" style="margin-top:30px">
+    <div class="results" style="margin-top:30px;flex:1">
       <div class="rescard hi">
         <div class="big">+20%</div>
         <div class="cl">Ottica Visual Care</div>
